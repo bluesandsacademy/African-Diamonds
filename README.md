@@ -1,21 +1,22 @@
 # African Diamonds
 
-A simple static HTML project for `africandiamonds_world_v11.html`.
+A static website deployed from `index.html` for clean root URL handling.
 
 ## Overview
 
-This repository contains a standalone HTML file that appears to be an interactive or informational page about African diamonds.
+This repository contains a standalone HTML site for African Diamonds, optimized to serve from the root path for clean URLs and easy Vercel deployment.
 
 ## Files
 
-- `africandiamonds_world_v11.html` — main HTML page.
+- `index.html` — main HTML page served at `/`.
 
 ## How to use
 
-1. Open `africandiamonds_world_v11.html` in a web browser.
-2. View the page locally or deploy it to any static file hosting service.
+1. Open `index.html` in a web browser.
+2. Deploy the repository to a static host like Vercel.
+3. Add your custom domain in Vercel to serve the site from your Namecheap domain.
 
 ## Notes
 
 - No build process is required.
-- The repository is ready to be pushed to GitHub as a static web page.
+- The site now works from the root URL (`/`) instead of a nested HTML file path.
