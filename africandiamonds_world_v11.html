@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>African Natural Diamonds — The Global Platform | africandiamonds.world</title>
+<meta name="description" content="African Natural Diamonds is the global platform connecting Africa's diamond mining industry with the world. Next activation: Cannes, 22 June 2026.">
+<meta property="og:title" content="African Natural Diamonds — The Global Platform">
+<meta property="og:url" content="https://africandiamonds.world">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Warm Cannes palette */
+  --cream:    #FAF6EF;
+  --cream2:   #F4EEE2;
+  --champagne:#E8D9BE;
+  --sand:     #D4C4A0;
+  --warm:     #C4A97A;
+  --gold:     #B8965A;
+  --bronze:   #8B6F3E;
+  --ink:      #1C1814;
+  --dark:     #2C2418;
+  --mid:      #7A6E5E;
+  --dim:      #A09080;
+  --rule:     rgba(180,160,120,0.2);
+  --rules:    rgba(180,160,120,0.35);
+  --white:    #FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+img{display:block;width:100%;}
+a{text-decoration:none;color:inherit;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  height:62px;display:flex;justify-content:space-between;align-items:center;
+  padding:0 52px;
+  background:rgba(250,246,239,0.95);
+  border-bottom:0.5px solid var(--rules);
+  backdrop-filter:blur(12px);
+  transition:background 0.3s,box-shadow 0.3s;
+}
+nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
+.nav-logo{display:flex;flex-direction:column;gap:2px;text-decoration:none;}
+.nav-logo-main{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:15px;letter-spacing:3px;color:var(--ink);text-transform:uppercase;}
+.nav-logo-sub{font-size:6.5px;font-weight:300;letter-spacing:4px;text-transform:uppercase;color:var(--dim);}
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-links a{font-size:8px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--mid);transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{border:0.5px solid var(--gold)!important;color:var(--gold)!important;padding:8px 22px;transition:background 0.2s,color 0.2s!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--white)!important;}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.ham span{width:22px;height:0.5px;background:var(--ink);display:block;}
+
+/* ── HERO — full bleed warm ── */
+.hero{
+  position:relative;height:100vh;min-height:640px;
+  overflow:hidden;display:flex;align-items:flex-end;
+}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:
+    linear-gradient(to top, rgba(28,24,20,0.88) 0%, rgba(28,24,20,0.4) 45%, rgba(28,24,20,0.1) 100%),
+    linear-gradient(to right, rgba(28,24,20,0.5) 0%, transparent 55%);
+}
+.hero-content{position:relative;z-index:2;padding:0 56px 80px;max-width:860px;}
+.hero-eyebrow{
+  font-size:7.5px;font-weight:300;letter-spacing:5px;
+  text-transform:uppercase;color:var(--champagne);
+  margin-bottom:24px;display:flex;align-items:center;gap:16px;opacity:0.7;
+}
+.hero-eyebrow::before{content:'';width:32px;height:0.5px;background:var(--champagne);flex-shrink:0;}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(58px,8vw,108px);
+  line-height:0.92;letter-spacing:-1px;color:var(--white);margin-bottom:28px;
+}
+.hero h1 em{font-style:italic;color:var(--champagne);}
+.hero-meta{
+  display:flex;gap:0;align-items:stretch;
+  border-top:0.5px solid rgba(232,217,190,0.25);
+  padding-top:28px;flex-wrap:wrap;
+}
+.hero-meta-item{padding:0 32px 0 0;margin-right:32px;border-right:0.5px solid rgba(232,217,190,0.2);}
+.hero-meta-item:last-of-type{border-right:none;}
+.hero-meta-label{font-size:7px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:rgba(232,217,190,0.5);margin-bottom:5px;display:block;}
+.hero-meta-val{font-size:13px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.5;}
+.hero-btns{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:28px;}
+.btn{display:inline-block;font-family:'Jost',sans-serif;font-size:8px;font-weight:300;letter-spacing:3px;text-transform:uppercase;padding:14px 34px;transition:all 0.25s;cursor:pointer;}
+.btn-gold{background:var(--warm);color:var(--white);border:0.5px solid var(--warm);}
+.btn-gold:hover{background:var(--gold);border-color:var(--gold);}
+.btn-ghost-light{background:transparent;color:rgba(255,255,255,0.7);border:0.5px solid rgba(255,255,255,0.3);}
+.btn-ghost-light:hover{border-color:rgba(255,255,255,0.7);color:var(--white);}
+.btn-dark{background:var(--ink);color:var(--cream);border:0.5px solid var(--ink);}
+.btn-dark:hover{background:var(--dark);}
+.btn-outline{background:transparent;color:var(--gold);border:0.5px solid var(--gold);}
+.btn-outline:hover{background:var(--gold);color:var(--white);}
+.hero-scroll{position:absolute;right:56px;bottom:80px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;}
+.hero-scroll span{font-size:7px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:rgba(232,217,190,0.4);writing-mode:vertical-rl;}
+.hero-scroll::after{content:'';width:0.5px;height:56px;background:rgba(232,217,190,0.2);}
+
+/* ── PLATFORM BAR ── */
+.platform-bar{
+  background:var(--ink);
+  border-bottom:0.5px solid rgba(255,255,255,0.06);
+  display:flex;align-items:stretch;
+}
+.pb-item{flex:1;padding:18px 24px;border-right:0.5px solid rgba(255,255,255,0.06);text-align:center;}
+.pb-item:last-child{border-right:none;}
+.pb-label{font-size:6.5px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:rgba(232,217,190,0.3);margin-bottom:5px;display:block;}
+.pb-val{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:14px;color:rgba(232,217,190,0.7);line-height:1.3;}
+
+/* ── SHARED SECTION ── */
+.sec-label{font-size:7.5px;font-weight:300;letter-spacing:5px;text-transform:uppercase;color:var(--warm);margin-bottom:18px;display:block;}
+.sec-label-lt{font-size:7.5px;font-weight:300;letter-spacing:5px;text-transform:uppercase;color:var(--champagne);margin-bottom:18px;display:block;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,3.5vw,56px);line-height:1.0;letter-spacing:-0.5px;color:var(--ink);margin-bottom:20px;}
+.sec-title em{font-style:italic;color:var(--gold);}
+.sec-title-lt{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,3.5vw,56px);line-height:1.0;letter-spacing:-0.5px;color:var(--white);margin-bottom:20px;}
+.sec-title-lt em{font-style:italic;color:var(--champagne);}
+.sec-body{font-size:14px;font-weight:300;line-height:2.0;color:var(--mid);max-width:640px;}
+.sec-body-lt{font-size:14px;font-weight:300;line-height:2.0;color:rgba(232,217,190,0.55);max-width:640px;}
+
+/* ── MISSION — split ── */
+.mission{display:grid;grid-template-columns:1fr 1fr;min-height:680px;}
+.mission-img{position:relative;overflow:hidden;}
+.mission-img img{height:100%;object-fit:cover;transition:transform 1.2s ease;}
+.mission-img:hover img{transform:scale(1.04);}
+.mission-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(28,24,20,0.2) 0%,transparent 60%);}
+.mission-img-cap{position:absolute;bottom:28px;left:28px;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:300;}
+.mission-text{padding:80px 64px;background:var(--cream);display:flex;flex-direction:column;justify-content:center;border-left:0.5px solid var(--rule);}
+.pull-quote{padding:22px 0;margin:24px 0;border-top:0.5px solid var(--rules);border-bottom:0.5px solid var(--rules);}
+.pull-quote p{font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:20px;line-height:1.65;color:var(--ink);}
+.pillars{margin-top:28px;border-top:0.5px solid var(--rule);}
+.pillar-row{padding:16px 0;border-bottom:0.5px solid var(--rule);display:flex;gap:18px;align-items:flex-start;}
+.pillar-n{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:20px;color:var(--champagne);flex-shrink:0;line-height:1;padding-top:2px;}
+.pillar-t{font-size:12.5px;font-weight:400;color:var(--ink);}
+.pillar-d{font-size:11.5px;font-weight:300;color:var(--mid);line-height:1.65;margin-top:3px;}
+
+/* ── FULL BLEED PHOTO BREAK ── */
+.photo-break{position:relative;height:72vh;min-height:480px;overflow:hidden;}
+.photo-break img{height:100%;object-fit:cover;transition:transform 1.5s ease;}
+.photo-break:hover img{transform:scale(1.03);}
+.pb-overlay{position:absolute;inset:0;display:flex;align-items:center;}
+.pb-overlay-l{background:linear-gradient(to right, rgba(28,24,20,0.78) 0%, rgba(28,24,20,0.2) 55%, transparent 100%);}
+.pb-overlay-r{background:linear-gradient(to left, rgba(28,24,20,0.78) 0%, rgba(28,24,20,0.2) 55%, transparent 100%);}
+.pb-text{padding:0 80px;max-width:600px;}
+.pb-text-r{margin-left:auto;text-align:right;}
+.pb-label-t{font-size:7.5px;font-weight:300;letter-spacing:5px;text-transform:uppercase;color:var(--champagne);margin-bottom:18px;display:block;opacity:0.6;}
+.pb-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,5vw,68px);line-height:0.95;letter-spacing:-0.5px;color:var(--white);}
+.pb-title em{font-style:italic;color:var(--champagne);}
+.pb-rule{width:40px;height:0.5px;background:rgba(232,217,190,0.35);margin:20px 0;}
+.pb-rule-r{margin-left:auto;}
+.pb-body{font-size:14px;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.85;}
+
+/* ── STATS BAND — warm dark ── */
+.stats-band{background:var(--ink);padding:100px 56px;}
+.stats-intro{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:end;margin-bottom:64px;}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:0.5px solid rgba(232,217,190,0.1);border-left:0.5px solid rgba(232,217,190,0.1);}
+.stat-cell{padding:40px 16px;border-right:0.5px solid rgba(232,217,190,0.1);border-bottom:0.5px solid rgba(232,217,190,0.1);text-align:center;}
+.stat-n{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:50px;color:var(--champagne);line-height:1;display:block;}
+.stat-l{font-size:7px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:rgba(232,217,190,0.3);margin-top:9px;line-height:1.7;display:block;}
+
+/* ── EVENTS — cream ── */
+.events-sec{background:var(--cream2);}
+.events-header{padding:100px 56px 56px;border-bottom:0.5px solid var(--rule);}
+.events-grid{display:grid;grid-template-columns:1fr 1fr;}
+.ev-card{border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);}
+.ev-card:nth-child(2n){border-right:none;}
+.ev-img{position:relative;height:300px;overflow:hidden;}
+.ev-img img{height:100%;object-fit:cover;transition:transform 0.9s ease;}
+.ev-card:hover .ev-img img{transform:scale(1.05);}
+.ev-tag{position:absolute;top:20px;left:20px;font-size:7px;letter-spacing:2.5px;text-transform:uppercase;color:var(--white);border:0.5px solid rgba(255,255,255,0.5);padding:5px 12px;font-weight:300;background:rgba(28,24,20,0.3);backdrop-filter:blur(4px);}
+.ev-body{padding:40px 44px;}
+.ev-kicker{font-size:7px;font-weight:300;letter-spacing:4px;text-transform:uppercase;color:var(--warm);margin-bottom:10px;display:block;}
+.ev-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:23px;color:var(--ink);margin-bottom:12px;line-height:1.15;}
+.ev-desc{font-size:13px;font-weight:300;color:var(--mid);line-height:1.85;margin-bottom:18px;}
+.ev-list{list-style:none;}
+.ev-list li{font-size:12px;font-weight:300;color:var(--dim);padding:7px 0;border-bottom:0.5px solid var(--rule);display:flex;gap:12px;line-height:1.5;}
+.ev-list li::before{content:'—';color:var(--champagne);flex-shrink:0;}
+
+/* ── PAST EDITIONS — champagne ── */
+.past-sec{background:var(--cream2);padding:100px 56px;border-top:0.5px solid var(--rule);}
+.past-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:56px;border:0.5px solid var(--rules);}
+.past-card{padding:44px;background:var(--white);}
+.past-card:first-child{border-right:0.5px solid var(--rule);}
+.past-yr{font-size:7px;font-weight:300;letter-spacing:4px;text-transform:uppercase;color:var(--warm);margin-bottom:10px;display:block;}
+.past-title-t{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:21px;color:var(--ink);margin-bottom:12px;line-height:1.2;}
+.past-body-t{font-size:13px;font-weight:300;color:var(--mid);line-height:1.85;margin-bottom:14px;}
+.past-ul{list-style:none;}
+.past-ul li{font-size:12px;font-weight:300;color:var(--dim);padding:6px 0;border-bottom:0.5px solid var(--rule);display:flex;gap:10px;line-height:1.55;}
+.past-ul li::before{content:'—';flex-shrink:0;color:var(--sand);}
+
+/* ── BRANDS STRIP ── */
+.brands-strip{padding:44px 56px;border-top:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--cream);}
+.brands-label{font-size:7px;font-weight:300;letter-spacing:4px;text-transform:uppercase;color:var(--dim);margin-bottom:18px;display:block;}
+.brands-flex{display:flex;flex-wrap:wrap;gap:6px;}
+.brand-chip{font-size:9px;font-weight:300;letter-spacing:1px;text-transform:uppercase;color:var(--mid);padding:4px 12px;border:0.5px solid var(--champagne);}
+
+/* ── CONNECT — warm white ── */
+.connect-header{padding:100px 56px 0;background:var(--white);}
+.connect-cols{display:grid;grid-template-columns:1fr 1fr;background:var(--white);}
+.cc{padding:48px 56px 80px;}
+.cc:first-child{border-right:0.5px solid var(--rule);}
+.cc-label{font-size:7px;font-weight:300;letter-spacing:4px;text-transform:uppercase;color:var(--warm);margin-bottom:22px;padding-bottom:12px;border-bottom:0.5px solid var(--rule);display:block;}
+.cc-list{list-style:none;}
+.cc-list li{padding:12px 0;border-bottom:0.5px solid var(--rule);font-size:13px;font-weight:300;color:var(--mid);display:flex;gap:14px;align-items:flex-start;line-height:1.55;}
+.cc-list li strong{color:var(--ink);font-weight:400;}
+.cc-list li::before{content:'—';color:var(--sand);flex-shrink:0;margin-top:2px;}
+.invite-strip{padding:32px 56px;background:var(--cream2);border-top:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);display:flex;gap:24px;align-items:flex-start;}
+.is-mark{font-size:20px;color:var(--warm);flex-shrink:0;margin-top:3px;opacity:0.4;}
+.is-label{font-size:7px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--warm);margin-bottom:8px;display:block;}
+.is-body{font-size:13px;font-weight:300;color:var(--mid);line-height:1.85;}
+
+/* ── ANGOLA — warm split ── */
+.angola-sec{display:grid;grid-template-columns:1fr 1fr;min-height:560px;}
+.angola-img{position:relative;overflow:hidden;}
+.angola-img img{height:100%;object-fit:cover;transition:transform 1.2s ease;}
+.angola-sec:hover .angola-img img{transform:scale(1.04);}
+.angola-tag{position:absolute;top:32px;left:32px;font-size:7px;letter-spacing:3px;text-transform:uppercase;color:var(--white);border:0.5px solid rgba(255,255,255,0.4);padding:6px 14px;font-weight:300;background:rgba(28,24,20,0.25);}
+.angola-text{background:var(--ink);padding:80px 64px;display:flex;flex-direction:column;justify-content:center;}
+.angola-text p{margin-bottom:18px;}
+.angola-hl{font-size:13px;font-weight:300;color:var(--champagne);border-top:0.5px solid rgba(232,217,190,0.15);padding-top:20px;margin-top:6px;}
+
+/* ── BENEFITS — cream ── */
+.benefits-sec{background:var(--white);padding:100px 56px;}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:0.5px solid var(--rule);border-left:0.5px solid var(--rule);}
+.benefit-box{padding:40px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);transition:background 0.2s;}
+.benefit-box:hover{background:var(--cream);}
+.b-n{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:48px;color:var(--champagne);line-height:1;margin-bottom:14px;display:block;}
+.b-t{font-size:13px;font-weight:400;color:var(--ink);margin-bottom:10px;}
+.b-d{font-size:12px;font-weight:300;color:var(--mid);line-height:1.8;}
+
+/* ── OUTCOMES — dark warm ── */
+.outcomes-sec{background:var(--dark);padding:100px 56px;}
+.outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:0.5px solid rgba(232,217,190,0.1);border-left:0.5px solid rgba(232,217,190,0.1);}
+.out-box{padding:36px 28px;border-right:0.5px solid rgba(232,217,190,0.1);border-bottom:0.5px solid rgba(232,217,190,0.1);}
+.out-t{font-size:13px;font-weight:400;color:var(--champagne);margin-bottom:10px;line-height:1.4;}
+.out-d{font-size:12px;font-weight:300;color:rgba(232,217,190,0.35);line-height:1.75;}
+
+/* ── TEAM ── */
+.team-sec{background:var(--ink);padding:100px 56px;}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:0.5px solid rgba(232,217,190,0.08);border-left:0.5px solid rgba(232,217,190,0.08);}
+.team-box{padding:36px 28px;border-right:0.5px solid rgba(232,217,190,0.08);border-bottom:0.5px solid rgba(232,217,190,0.08);transition:background 0.2s;}
+.team-box:hover{background:rgba(232,217,190,0.03);}
+.t-role{font-size:7px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);margin-bottom:9px;display:block;opacity:0.7;}
+.t-name{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:21px;color:var(--champagne);margin-bottom:10px;line-height:1.1;}
+.t-bio{font-size:12px;font-weight:300;color:rgba(232,217,190,0.32);line-height:1.75;}
+
+/* ── CONTACT ── */
+.contact-sec{display:grid;grid-template-columns:1fr 1fr;}
+.contact-l{background:var(--cream2);padding:100px 56px;border-right:0.5px solid var(--rule);}
+.contact-r{background:var(--ink);padding:100px 56px;display:flex;flex-direction:column;justify-content:center;}
+.ci-label{font-size:7px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--warm);margin-top:28px;margin-bottom:10px;display:block;}
+.ci-opt{padding:13px 0;border-bottom:0.5px solid var(--rule);font-size:13px;font-weight:300;color:var(--mid);display:flex;justify-content:space-between;transition:color 0.2s;}
+.ci-opt:hover{color:var(--gold);}
+.ci-opt a{display:flex;width:100%;justify-content:space-between;}
+.ci-opt a::after{content:'→';font-size:12px;color:var(--warm);opacity:0.5;}
+.contact-email{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:21px;color:var(--champagne);display:block;border-top:0.5px solid rgba(232,217,190,0.1);padding-top:20px;margin-top:6px;transition:opacity 0.2s;}
+.contact-email:hover{opacity:0.6;}
+.partner-notes{font-size:11px;font-weight:300;color:rgba(232,217,190,0.2);line-height:2.2;margin-top:10px;}
+
+/* ── CTA ── */
+.cta-sec{position:relative;height:80vh;min-height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.cta-bg{position:absolute;inset:0;}
+.cta-bg img{height:100%;object-fit:cover;object-position:center 40%;}
+.cta-bg::after{content:'';position:absolute;inset:0;background:rgba(28,24,20,0.68);}
+.cta-content{position:relative;z-index:2;text-align:center;padding:0 56px;max-width:720px;}
+.cta-gem{margin:0 auto 36px;display:flex;justify-content:center;}
+.cta-gem svg{opacity:0.25;}
+.cta-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(42px,6vw,76px);color:var(--white);line-height:0.95;letter-spacing:-0.5px;margin-bottom:10px;}
+.cta-title em{font-style:italic;color:var(--champagne);}
+.cta-sub{font-size:7.5px;font-weight:300;letter-spacing:4px;text-transform:uppercase;color:rgba(232,217,190,0.3);margin-bottom:28px;display:block;}
+.cta-body{font-size:14px;font-weight:300;line-height:1.95;color:rgba(255,255,255,0.45);margin-bottom:40px;}
+.cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.cta-e{margin-top:24px;font-size:11px;font-weight:300;color:rgba(232,217,190,0.25);}
+.cta-e a{color:rgba(232,217,190,0.5);transition:color 0.2s;}
+.cta-e a:hover{color:var(--champagne);}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);padding:40px 56px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:32px;}
+.f-logo{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(232,217,190,0.3);margin-bottom:4px;}
+.f-sub{font-size:7px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:rgba(232,217,190,0.1);}
+.f-r{text-align:right;}
+.f-r p{font-size:11px;font-weight:300;color:rgba(232,217,190,0.2);line-height:2.1;}
+.f-r a{color:rgba(232,217,190,0.35);transition:color 0.2s;}
+.f-r a:hover{color:var(--champagne);}
+
+/* ── FADE ANIMATIONS ── */
+.fade{opacity:0;transform:translateY(20px);transition:opacity 0.9s ease,transform 0.9s ease;}
+.fade-l{opacity:0;transform:translateX(-20px);transition:opacity 0.9s ease,transform 0.9s ease;}
+.fade-r{opacity:0;transform:translateX(20px);transition:opacity 0.9s ease,transform 0.9s ease;}
+.in{opacity:1!important;transform:translate(0,0)!important;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .ham{display:flex;}
+  .hero-content{padding:0 20px 60px;}
+  .hero h1{font-size:clamp(52px,12vw,76px);}
+  .hero-btns{margin-top:20px;}
+  .hero-scroll{display:none;}
+  .platform-bar{flex-wrap:wrap;}
+  .pb-item{flex:1 1 40%;padding:12px 14px;}
+  .mission,.angola-sec,.contact-sec{grid-template-columns:1fr;}
+  .mission-img{height:320px;}
+  .mission-text{padding:56px 20px;border-left:none;border-top:0.5px solid var(--rule);}
+  .angola-img{height:280px;}
+  .angola-text{padding:56px 20px;}
+  .contact-l{border-right:none;border-bottom:0.5px solid var(--rule);padding:60px 20px;}
+  .contact-r{padding:60px 20px;}
+  .stats-band,.past-sec,.benefits-sec,.outcomes-sec,.team-sec,.brands-strip{padding:64px 20px;}
+  .events-header,.connect-header{padding:64px 20px 40px;}
+  .stats-intro{grid-template-columns:1fr;gap:36px;}
+  .stats-grid{grid-template-columns:repeat(3,1fr);}
+  .events-grid,.past-grid,.connect-cols{grid-template-columns:1fr;}
+  .ev-card:nth-child(2n){border-right:none;}
+  .past-card:first-child{border-right:none;border-bottom:0.5px solid var(--rule);}
+  .cc:first-child{border-right:none;border-bottom:0.5px solid var(--rule);}
+  .cc{padding:40px 20px;}
+  .invite-strip,.brands-strip{padding:24px 20px;}
+  .benefits-grid,.outcomes-grid,.team-grid{grid-template-columns:1fr 1fr;}
+  .pb-text{padding:0 28px;}
+  footer{grid-template-columns:1fr;padding:28px 20px;}
+  .f-r{text-align:left;}
+  .ev-body{padding:28px 20px;}
+  .cta-sec{height:auto;padding:80px 0;}
+  .cta-content{padding:0 20px;}
+}
+@media(max-width:560px){
+  .benefits-grid,.outcomes-grid,.team-grid,.stats-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#">
+    <span class="nav-logo-main">African Natural Diamonds</span>
+    <span class="nav-logo-sub">The Global Platform &nbsp;·&nbsp; africandiamonds.world</span>
+  </a>
+  <div class="nav-links">
+    <a href="#mission">Platform</a>
+    <a href="#events">Events</a>
+    <a href="#past">Track Record</a>
+    <a href="#connect">Who We Connect</a>
+    <a href="#angola">Angola</a>
+    <a href="#team">Team</a>
+    <a href="#contact" class="nav-cta">Enquire</a>
+  </div>
+  <div class="ham" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO — real Cannes Croisette -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1800&q=90" alt="Cannes French Riviera" loading="eager">
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow fade">africandiamonds.world &nbsp;·&nbsp; The Global Platform</div>
+    <h1 class="fade">African<br>Natural<br><em>Diamonds</em></h1>
+    <div class="hero-meta fade">
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Next Activation</span>
+        <span class="hero-meta-val">Cannes<br>22 June 2026</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Upcoming Mission</span>
+        <span class="hero-meta-val">Angola<br>Trade Mission</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Global Database</span>
+        <span class="hero-meta-val">30,000+<br>Leaders</span>
+      </div>
+    </div>
+    <div class="hero-btns fade">
+      <a href="#contact" class="btn btn-gold">Enquire Now</a>
+      <a href="#mission" class="btn btn-ghost-light">Discover the Platform</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span></div>
+</section>
+
+<!-- PLATFORM BAR -->
+<div class="platform-bar">
+  <div class="pb-item"><span class="pb-label">Platform</span><span class="pb-val">africandiamonds.world</span></div>
+  <div class="pb-item"><span class="pb-label">Presented by</span><span class="pb-val">88Percent · ADC · ADMA</span></div>
+  <div class="pb-item"><span class="pb-label">Partners</span><span class="pb-val">Capital 88 · Alliance Development Partners</span></div>
+  <div class="pb-item"><span class="pb-label">Hosted by</span><span class="pb-val">Dr M'zée Fula-Ngenge · Chair of Proceedings</span></div>
+  <div class="pb-item"><span class="pb-label">Access</span><span class="pb-val">By Invitation Only</span></div>
+</div>
+
+<!-- MISSION -->
+<section class="mission" id="mission">
+  <div class="mission-img fade-l">
+    <!-- Real diamond close-up — sparkle and light -->
+    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=90" alt="Natural diamond — light and sparkle">
+    <span class="mission-img-cap">Where origin meets opportunity</span>
+  </div>
+  <div class="mission-text">
+    <span class="sec-label fade">The Platform</span>
+    <h2 class="sec-title fade">Africa's natural<br>diamonds.<br><em>The world's attention.</em></h2>
+    <div class="pull-quote fade">
+      <p>"The platform that showcases and connects Africa's diamond sector and ecosystem to the world — retelling the narrative of natural African diamonds to a new generation, growing consumer demand and the economic and social viability of the industry."</p>
+    </div>
+    <p class="sec-body fade">We operate co-located activations at the world's major events, festivals, and exhibitions — placing Africa's natural diamond story where the most influential decision-makers already gather. Beyond events, we facilitate and nurture a year-round pipeline of relationships that converts perception into commercial traction. Central to our mission: retelling the narrative of African natural diamonds to a new, global, and young audience.</p>
+    <div class="pillars fade">
+      <div class="pillar-row">
+        <span class="pillar-n">01</span>
+        <div><div class="pillar-t">Perception to Commercial Traction</div><div class="pillar-d">Shifting global narrative into real commercial outcomes — partnerships, licensing, and retail channels.</div></div>
+      </div>
+      <div class="pillar-row">
+        <span class="pillar-n">02</span>
+        <div><div class="pillar-t">Global Consumer Demand Growth</div><div class="pillar-d">Retelling the narrative of African natural diamonds to new and global audiences — building enduring desire through culture, brand, and the voices of the next generation.</div></div>
+      </div>
+      <div class="pillar-row">
+        <span class="pillar-n">03</span>
+        <div><div class="pillar-t">Socio-Economic Impact</div><div class="pillar-d">Commercial growth anchored in local beneficiation, job creation, and shared prosperity.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK 1 — Cannes Showcase event feeling — golden hour terrace -->
+<div class="photo-break">
+  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1800&q=90" alt="Luxury Cannes Riviera villa">
+  <div class="pb-overlay pb-overlay-l">
+    <div class="pb-text fade">
+      <span class="pb-label-t">22 June 2026 · Cannes, France · By Invitation Only</span>
+      <h2 class="pb-title">An evening<br>of <em>rare access</em></h2>
+      <div class="pb-rule"></div>
+      <p class="pb-body">A defining moment at the opening of one of the world's most prestigious festivals — setting the narrative for Africa through luxury, culture, provenance and global influence. At an exclusive Cannes Riviera villa, by invitation only.</p>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats-band" id="past">
+  <div class="stats-intro">
+    <div>
+      <span class="sec-label-lt fade">Proven Track Record · Two Years at Cannes</span>
+      <h2 class="sec-title-lt fade" style="font-size:clamp(30px,3vw,46px);">Two years.<br>One platform.<br><em>Built.</em></h2>
+    </div>
+    <p class="sec-body-lt fade">Our team has activated at Cannes for two consecutive years — building one of the most trusted independent platforms at the festival. Operating a 30,000-strong curated global database, delivering a full week of curated networking, one-to-one meetings, panel sessions, and premium hosted events. Every logistic, every guest, every introduction — managed end to end.</p>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-cell fade"><span class="stat-n">3,500+</span><span class="stat-l">Registrations from global brand marketing leaders</span></div>
+    <div class="stat-cell fade"><span class="stat-n">100+</span><span class="stat-l">Attendees per session</span></div>
+    <div class="stat-cell fade"><span class="stat-n">57</span><span class="stat-l">Commercial deals agreed through onsite curated meetings</span></div>
+    <div class="stat-cell fade"><span class="stat-n">200+</span><span class="stat-l">Creators in attendance</span></div>
+    <div class="stat-cell fade"><span class="stat-n">30K</span><span class="stat-l">Curated global database of brand and cultural leaders</span></div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events-sec" id="events">
+  <div class="events-header">
+    <span class="sec-label fade">The Full Programme · 22 June 2026 · Cannes</span>
+    <h2 class="sec-title fade">Four days.<br><em>One movement.</em></h2>
+    <p class="sec-body fade" style="margin-top:8px;">A carefully curated four-day programme at Cannes 2026 — from an intimate private villa showcase to a week of deal-making, dinners, and cultural celebration. Each day is purposeful, each room is curated, every conversation is pre-arranged.</p>
+  </div>
+
+  <!-- DAY TABS -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);">
+    <div style="padding:20px 28px;border-right:0.5px solid var(--rule);text-align:center;">
+      <div style="font-size:7px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--warm);margin-bottom:5px;">Monday</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);">22 June</div>
+      <div style="font-size:10px;font-weight:300;color:var(--mid);margin-top:4px;">African Diamond Showcase<br>&amp; Night of Diamonds</div>
+    </div>
+    <div style="padding:20px 28px;border-right:0.5px solid var(--rule);text-align:center;background:var(--cream2);">
+      <div style="font-size:7px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--warm);margin-bottom:5px;">Tuesday</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);">23 June</div>
+      <div style="font-size:10px;font-weight:300;color:var(--mid);margin-top:4px;">Private 1:1 Meetings<br>&amp; Client Activations</div>
+    </div>
+    <div style="padding:20px 28px;border-right:0.5px solid var(--rule);text-align:center;background:var(--cream2);">
+      <div style="font-size:7px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--warm);margin-bottom:5px;">Wednesday</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);">24 June</div>
+      <div style="font-size:10px;font-weight:300;color:var(--mid);margin-top:4px;">Private Dinners<br>&amp; Personalised Activations</div>
+    </div>
+    <div style="padding:20px 28px;text-align:center;">
+      <div style="font-size:7px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--warm);margin-bottom:5px;">Thursday</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);">25 June</div>
+      <div style="font-size:10px;font-weight:300;color:var(--mid);margin-top:4px;">88% Programme<br>&amp; Power List Party</div>
+    </div>
+  </div>
+
+  <div class="events-grid">
+
+    <!-- 22 JUNE -->
+    <div class="ev-card">
+      <div class="ev-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85" alt="Cannes French Riviera" loading="lazy">
+        <div class="ev-tag">22 June · Private Villa · Cannes</div>
+      </div>
+      <div class="ev-body fade">
+        <span class="ev-kicker">Monday 22 June 2026 · By Invitation Only</span>
+        <div class="ev-title">African Diamond Showcase &amp;<br>The Night of African Diamonds</div>
+        <p class="ev-desc">A curated multimedia exhibition hosted within an exclusive private villa in Cannes — chaired and co-hosted by Dr M'zée Fula-Ngenge (ADC) and Mr António Oliveira (ADMA). An intimate gathering of 40–60 leaders: industry innovators, cultural icons, tastemakers, collectors, investors and global press. Equal parts celebration and statement — Africa is now setting the terms of its own story.</p>
+        <ul class="ev-list">
+          <li>Private Senior Roundtable · 14:00–16:00 · Chaired by Dr M'zée Fula-Ngenge</li>
+          <li>African Diamond Showcase · Curated multimedia exhibition · Private Villa</li>
+          <li>The Night of African Diamonds · Entertainer to Investor Dinner · Sunset</li>
+          <li>Live intimate performance · African chef · Champagne reception</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 23-24 JUNE -->
+    <div class="ev-card">
+      <div class="ev-img">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=85" alt="Private 1:1 meetings and roundtable" loading="lazy">
+        <div class="ev-tag">23–24 June · Private · Cannes</div>
+      </div>
+      <div class="ev-body fade">
+        <span class="ev-kicker">Tuesday 23 &amp; Wednesday 24 June 2026</span>
+        <div class="ev-title">Private 1:1 Meetings,<br>Dinners &amp; Client Activations</div>
+        <p class="ev-desc">Two days of private, curated commercial activity — pre-arranged one-to-one meetings, personalised activations, and invitation-only dinners. Every meeting is purposeful, pre-qualified, and commercially focused. The conversations that move from Cannes to commercial reality are made here.</p>
+        <ul class="ev-list">
+          <li>Pre-arranged 1:1 meetings — aligned to your commercial objectives</li>
+          <li>Personalised activations for partners and sponsors</li>
+          <li>Private invitation-only dinners — curated guest lists</li>
+          <li>88Percent Capital Session · Africa to the World C-Suite Conversation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 25 JUNE -->
+    <div class="ev-card">
+      <div class="ev-img">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=85" alt="88Percent programme Cannes" loading="lazy">
+        <div class="ev-tag">25 June · 88% Programme · Cannes</div>
+      </div>
+      <div class="ev-body fade">
+        <span class="ev-kicker">Thursday 25 June 2026 · Cannes</span>
+        <div class="ev-title">88% Programme &amp;<br>Power List Party</div>
+        <p class="ev-desc">The flagship 88Percent day — where the Global Majority culture drives economic power. A full day of sessions, panels, and conversations with storytellers, creators, and brand leaders shaping cultural resonance, market relevance and growth for global brands. Culminating in the 88% Power List Party.</p>
+        <ul class="ev-list">
+          <li>Luxury's Next Billion · AI &amp; The New Creative Frontier · Africa's Creative Explosion</li>
+          <li>Global Majority Sports Boom · Media Surge · The Female Economy</li>
+          <li>88Percent Capital: Where Capital Meets Culture for Growth</li>
+          <li>88% Power List Party · Recognising the culture shapers of the Global Majority</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- YEAR ROUND -->
+    <div class="ev-card">
+      <div class="ev-img">
+        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=900&q=85" alt="Year-round relationship pipeline" loading="lazy">
+        <div class="ev-tag">Platform · Year-Round</div>
+      </div>
+      <div class="ev-body fade">
+        <span class="ev-kicker">Year-Round · Angola Trade Mission · Global Platform</span>
+        <div class="ev-title">Facilitating &amp; Nurturing<br>a Relationship Pipeline</div>
+        <p class="ev-desc">The platform operates year-round — facilitating and nurturing relationships between Africa's diamond industry and global partners. Cannes is the catalyst. Angola is the conversion. The year-round pipeline ensures every connection deepens into long-term commercial outcome.</p>
+        <ul class="ev-list">
+          <li>30,000-strong curated global database of brand and cultural leaders</li>
+          <li>Angola Trade Mission · Direct access to operations and government</li>
+          <li>Ongoing commercial introductions via Alliance Development Partners</li>
+          <li>Perception to commercial traction · Socio-economic impact</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAST EDITIONS -->
+<section class="past-sec">
+  <span class="sec-label fade">Proven Track Record · Two Years at Cannes</span>
+  <h2 class="sec-title fade">Previous<br><em>Editions</em></h2>
+  <div class="past-grid">
+    <div class="past-card fade">
+      <span class="past-yr">Year 1 · Cannes</span>
+      <div class="past-title-t">Inaugural Cannes Activation</div>
+      <p class="past-body-t">A full week of curated sessions, one-to-one business meetings, panel programming, and evening events at Cannes — establishing a 30,000-strong global database of brand and cultural leaders and building the platform infrastructure on which the African Diamond Showcase is built.</p>
+      <ul class="past-ul">
+        <li>Full week of curated networking and pre-arranged one-to-one business meetings</li>
+        <li>Concierge audience delivery — attendees pre-matched to partner commercial objectives</li>
+        <li>Global CMOs, luxury executives, brand leaders, and cultural decision-makers in attendance</li>
+      </ul>
+    </div>
+    <div class="past-card fade">
+      <span class="past-yr">Year 2 · Cannes</span>
+      <div class="past-title-t">Scale — A Landmark Cultural Moment</div>
+      <p class="past-body-t">A headline session with a world-renowned global cultural leader drew significant international attention and elevated the platform's profile. 3,500+ registrations. 57 commercial deals agreed through onsite curated meetings. 200+ creators in attendance.</p>
+      <ul class="past-ul">
+        <li>3,500+ registrations from global brand marketing leaders across the festival</li>
+        <li>57 commercial deals agreed through pre-arranged onsite curated meetings</li>
+        <li>200+ creators in attendance · 100+ attendees per session</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<div class="brands-strip">
+  <span class="brands-label">Global leaders represented across our Cannes activations</span>
+  <div class="brands-flex">
+    <!-- Ultra Luxury & High Jewellery -->
+    <span class="brand-chip">Cartier</span><span class="brand-chip">Bulgari</span><span class="brand-chip">Van Cleef &amp; Arpels</span><span class="brand-chip">Tiffany &amp; Co.</span><span class="brand-chip">Harry Winston</span><span class="brand-chip">Chopard</span><span class="brand-chip">Graff</span><span class="brand-chip">De Beers</span><span class="brand-chip">Piaget</span><span class="brand-chip">Mikimoto</span>
+    <!-- Luxury Fashion Houses -->
+    <span class="brand-chip">Chanel</span><span class="brand-chip">Dior</span><span class="brand-chip">Louis Vuitton</span><span class="brand-chip">Hermès</span><span class="brand-chip">Gucci</span><span class="brand-chip">Prada</span><span class="brand-chip">Burberry</span><span class="brand-chip">Valentino</span><span class="brand-chip">Bottega Veneta</span><span class="brand-chip">Saint Laurent</span>
+    <!-- Luxury Hospitality -->
+    <span class="brand-chip">Four Seasons</span><span class="brand-chip">Aman</span><span class="brand-chip">Rosewood</span><span class="brand-chip">Corinthia Hotels</span><span class="brand-chip">Belmond</span><span class="brand-chip">Mandarin Oriental</span>
+    <!-- Prestige Watches -->
+    <span class="brand-chip">Rolex</span><span class="brand-chip">Patek Philippe</span><span class="brand-chip">Tag Heuer</span><span class="brand-chip">IWC</span><span class="brand-chip">Audemars Piguet</span>
+    <!-- Global Brands at Cannes activations -->
+    <span class="brand-chip">Meta</span><span class="brand-chip">Netflix</span><span class="brand-chip">TikTok</span><span class="brand-chip">Adidas</span><span class="brand-chip">Samsung</span><span class="brand-chip">HSBC</span><span class="brand-chip">Diageo</span><span class="brand-chip">Unilever</span><span class="brand-chip">Nike</span><span class="brand-chip">BBC</span><span class="brand-chip">Lego</span><span class="brand-chip">Mastercard</span><span class="brand-chip">Tesco</span><span class="brand-chip">Live Nation</span><span class="brand-chip">Universal</span><span class="brand-chip">Deezer</span><span class="brand-chip">Financial Times</span><span class="brand-chip">Edelman</span><span class="brand-chip">Burson</span><span class="brand-chip">AWS</span><span class="brand-chip">Uber</span><span class="brand-chip">Sony</span><span class="brand-chip">Primark</span><span class="brand-chip">Expedia</span><span class="brand-chip">Visit Britain</span><span class="brand-chip">Fortnum &amp; Mason</span><span class="brand-chip">Stone Island</span><span class="brand-chip">Oatly</span><span class="brand-chip">StockX</span><span class="brand-chip">Clear Channel</span><span class="brand-chip">Mars</span><span class="brand-chip">Nokia</span><span class="brand-chip">Now TV</span><span class="brand-chip">Royal Navy</span><span class="brand-chip">Dow Jones</span><span class="brand-chip">Dr Barbara Sturm</span><span class="brand-chip">Lucky Saint</span><span class="brand-chip">Mejuri</span>
+  </div>
+</div>
+
+<!-- PHOTO BREAK 2 — Diamond close up sparkle -->
+<div class="photo-break">
+  <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1800&q=90" alt="Natural diamond facets and light">
+  <div class="pb-overlay pb-overlay-r">
+    <div class="pb-text pb-text-r fade">
+      <span class="pb-label-t" style="display:block;text-align:right;">The origin of luxury</span>
+      <h2 class="pb-title">Africa's<br><em>natural diamonds.</em></h2>
+      <div class="pb-rule pb-rule-r"></div>
+      <p class="pb-body">Africa's natural diamonds carry a story no laboratory can replicate — of origin, community, culture, and extraordinary geological rarity. The platform exists to ensure that story reaches the people who decide what the world desires.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONNECT -->
+<div id="connect">
+  <div class="connect-header">
+    <span class="sec-label fade">Who We Connect</span>
+    <h2 class="sec-title fade">The industry to<br><em>the world</em></h2>
+  </div>
+  <div class="connect-cols">
+    <div class="cc">
+      <span class="cc-label">African Diamond Industry</span>
+      <ul class="cc-list fade">
+        <li><strong>African natural diamond producers</strong> — industry principals seeking global brand partners and demand channels</li>
+        <li><strong>Diamond cutters, polishers &amp; manufacturers</strong> — seeking luxury buyers and brand licensing access</li>
+        <li><strong>Local beneficiation enterprises</strong> — positioning Africa's value-add capacity to global partners</li>
+        <li><strong>Mining investment vehicles</strong> — private equity, DFIs, and sovereign wealth funds</li>
+        <li><strong>Government &amp; trade ministries</strong> — trade ministers and industry policy-makers</li>
+        <li><strong>Industry association bodies</strong> — ADC, ADMA, Kimberley Process representatives</li>
+      </ul>
+    </div>
+    <div class="cc">
+      <span class="cc-label">Global Partners &amp; Demand Generators</span>
+      <ul class="cc-list fade">
+        <li><strong>Global CMOs &amp; brand directors</strong> — luxury, lifestyle, and prestige category leaders</li>
+        <li><strong>Luxury jewellery retailers &amp; buyers</strong> — actively sourcing natural diamond collections</li>
+        <li><strong>High jewellery fashion houses</strong> — Maison directors, creative leads, and procurement</li>
+        <li><strong>Celebrity entertainers &amp; cultural ambassadors</strong> — global consumer aspiration</li>
+        <li><strong>Digital creators &amp; next-generation influencers</strong> — young, culturally relevant voices with high-net-worth and aspirational audiences who are reshaping how luxury is desired</li>
+        <li><strong>ESG &amp; sustainability leads</strong> — provenance-led responsible luxury advocates</li>
+      </ul>
+    </div>
+  </div>
+  <div class="invite-strip">
+    <div class="is-mark" aria-hidden="true">◈</div>
+    <div>
+      <span class="is-label">Sponsor &amp; Partner Invitation Policy</span>
+      <p class="is-body">Sponsors and partners are actively encouraged to invite their own global partners, clients, and contacts to attend all platform activations — extending the commercial network and amplifying outcomes for every participant.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ANGOLA — real African landscape, not Greece -->
+<div class="angola-sec" id="angola">
+  <div class="angola-img">
+    <!-- African savanna / dramatic African landscape -->
+    <img src="https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?w=900&q=85" alt="Angola — African diamond trade mission" loading="lazy">
+    <div class="angola-tag">Upcoming · Angola · 2026/27</div>
+  </div>
+  <div class="angola-text">
+    <span class="sec-label-lt fade">Trade Mission</span>
+    <h2 class="sec-title-lt fade" style="margin-bottom:24px;">Angola<br><em>Trade Mission</em></h2>
+    <p class="sec-body-lt fade">The Angola Trade Mission converts Cannes conversations into in-country commercial outcomes — bringing international partners, buyers, investors, and brand decision-makers directly to Angola's diamond operations, processing facilities, and government stakeholders.</p>
+    <p class="sec-body-lt fade">Designed to consolidate relationships established at Cannes and across the platform, the Mission ensures every in-country meeting is purposeful, pre-qualified, and commercially ready.</p>
+    <p class="angola-hl fade">All platform participants receive priority access and inclusion in the Angola Trade Mission programme.</p>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section class="benefits-sec">
+  <span class="sec-label fade">Why the Industry Must Be Here</span>
+  <h2 class="sec-title fade">Six reasons to<br><em>be in the room</em></h2>
+  <div class="benefits-grid">
+    <div class="benefit-box fade"><span class="b-n">01</span><div class="b-t">High-value relationships</div><p class="b-d">Direct access to CMOs, luxury brand buyers, and global influencers. Pre-arranged introductions aligned to your specific commercial objectives.</p></div>
+    <div class="benefit-box fade"><span class="b-n">02</span><div class="b-t">Cultural brand positioning</div><p class="b-d">Africa's natural diamond origin story told directly to global CMOs, next-generation influencers, and the cultural voices who shape what the world desires — at the world's most influential creative gathering.</p></div>
+    <div class="benefit-box fade"><span class="b-n">03</span><div class="b-t">Commercial conversations</div><p class="b-d">Supply partnerships, licensing, and retail channel access with pre-qualified counterparts. 57 commercial deals were agreed at a single activation.</p></div>
+    <div class="benefit-box fade"><span class="b-n">04</span><div class="b-t">Premium brand association</div><p class="b-d">Co-branded invitations, bespoke signage, and diamond-inspired visual storytelling woven throughout the venue and evening programme.</p></div>
+    <div class="benefit-box fade"><span class="b-n">05</span><div class="b-t">Global amplification</div><p class="b-d">Professional photography and creator-led content extending your brand's visibility to a 30,000-strong curated global database of decision-makers.</p></div>
+    <div class="benefit-box fade"><span class="b-n">06</span><div class="b-t">Year-round pipeline</div><p class="b-d">Opted-in contact data and a 12-month partnership support programme via Alliance Development Partners and 88Percent's global network.</p></div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK 3 — Golden hour elegant event / Cannes terrace -->
+<div class="photo-break">
+  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=85" alt="The Night of African Diamonds — elegant evening event">
+  <div class="pb-overlay pb-overlay-l">
+    <div class="pb-text fade">
+      <span class="pb-label-t">22 June 2026 · French Riviera · By Invitation Only</span>
+      <h2 class="pb-title">The Night of<br><em>African Diamonds</em></h2>
+      <div class="pb-rule"></div>
+      <p class="pb-body">An invitation-only evening. Global CMOs. Celebrity entertainers. Luxury executives. Cultural tastemakers. Investors. One room, one story — an industry rewriting its narrative on the world stage.</p>
+    </div>
+  </div>
+</div>
+
+<!-- OUTCOMES -->
+<section class="outcomes-sec">
+  <span class="sec-label-lt fade">Expected Outcomes</span>
+  <h2 class="sec-title-lt fade">What participation<br><em>delivers</em></h2>
+  <div class="outcomes-grid">
+    <div class="out-box fade"><div class="out-t">Perception to commercial traction</div><p class="out-d">Shifting the global narrative into real commercial outcomes — partnerships, brand associations, and retail channels generating measurable revenue.</p></div>
+    <div class="out-box fade"><div class="out-t">Global consumer demand growth</div><p class="out-d">Building enduring consumer desire for natural diamonds through cultural storytelling, brand partnerships, and influencer activation.</p></div>
+    <div class="out-box fade"><div class="out-t">Socio-economic impact</div><p class="out-d">Commercial growth anchored in shared prosperity — local beneficiation, job creation, community wealth, and policy alignment.</p></div>
+    <div class="out-box fade"><div class="out-t">Investment &amp; capital mobilisation</div><p class="out-d">Introductions through Capital 88 to investors committed to beneficiation infrastructure and community wealth sharing.</p></div>
+    <div class="out-box fade"><div class="out-t">Angola Trade Mission conversion</div><p class="out-d">International partners connected directly to African diamond operations within 12 months of Cannes.</p></div>
+    <div class="out-box fade"><div class="out-t">Year-round relationship pipeline</div><p class="out-d">A sustained 12-month programme of curated introductions ensuring every Cannes connection is nurtured through to outcome.</p></div>
+  </div>
+</section>
+
+<!-- ADVISORY BOARD -->
+<section style="background:var(--cream2);padding:80px 56px;border-bottom:0.5px solid var(--rule);">
+  <span class="sec-label fade">88% Advisory Board</span>
+  <h2 class="sec-title fade">Strategic advisors<br><em>shaping the platform</em></h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;border-top:0.5px solid var(--rule);border-left:0.5px solid var(--rule);">
+    <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
+      <div style="font-size:7px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);margin-bottom:9px;">Co-Host · Chair of Proceedings · Advisory Board</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);margin-bottom:10px;">Dr M'zée Fula-Ngenge</div>
+      <p style="font-size:12px;font-weight:300;color:var(--mid);line-height:1.75;">Veteran mining engineer and global economist with 40+ years in the diamond industry. Chairman of the African Diamond Council. Co-Host and Chair of Proceedings of the African Diamond Showcase.</p>
+    </div>
+    <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
+      <div style="font-size:7px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);margin-bottom:9px;">Advisory Board · CMO, Cassava Technologies</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);margin-bottom:10px;">Ifeoma Jibunoh</div>
+      <p style="font-size:12px;font-weight:300;color:var(--mid);line-height:1.75;">Chief Marketing Officer at Cassava Technologies. 20+ years across technology, FMCG and payments. Senior roles at Mastercard and Heineken. Brand strategy and storytelling across Africa and international markets.</p>
+    </div>
+    <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
+      <div style="font-size:7px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);margin-bottom:9px;">Advisory Board · Executive Chairman, Silverbacks Holdings</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);margin-bottom:10px;">Ibrahim Sagna</div>
+      <p style="font-size:12px;font-weight:300;color:var(--mid);line-height:1.75;">Senegalese financier and Executive Chairman of Silverbacks Holdings. 20+ years global finance across the IMF, Afreximbank, and private equity. Focused on scaling African-born businesses globally.</p>
+    </div>
+    <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
+      <div style="font-size:7px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);margin-bottom:9px;">Advisory Board · Senior Fellow &amp; former CMCO, Mastercard</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);margin-bottom:10px;">Raja Rajamannar</div>
+      <p style="font-size:12px;font-weight:300;color:var(--mid);line-height:1.75;">Globally recognised for transforming modern marketing through data, creativity and culture. Champion of innovation at the intersection of brand, technology and business growth.</p>
+    </div>
+    <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
+      <div style="font-size:7px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);margin-bottom:9px;">Advisory Board · Head of Original Brands, Sky</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);margin-bottom:10px;">Tim Yaw Struthers</div>
+      <p style="font-size:12px;font-weight:300;color:var(--mid);line-height:1.75;">Award-winning Scottish-Ghanaian film and TV executive. Head of Original Brands at Sky. Two decades at Universal and major studios. Champion of the African creative economy.</p>
+    </div>
+    <div style="padding:36px 32px;border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
+      <div style="font-size:7px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--warm);margin-bottom:9px;">Advisory Board · Founder, Gravana</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--ink);margin-bottom:10px;">Cesar Christoforidis</div>
+      <p style="font-size:12px;font-weight:300;color:var(--mid);line-height:1.75;">Global sales, marketing and creator economy leader. Founder of Gravana, an AI platform helping brands decode data, culture and commerce across emerging markets.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- TEAM -->
+<section class="team-sec" id="team">
+  <span class="sec-label-lt fade">Project Team</span>
+  <h2 class="sec-title-lt fade">The people<br><em>delivering this</em></h2>
+  <div class="team-grid">
+    <div class="team-box fade"><span class="t-role">CEO · Founder</span><div class="t-name">Vanessa Sawyerr</div><p class="t-bio">Brand strategist with 25+ years in partnerships, fundraising, and cultural storytelling. Generated over £15M in sponsorship and sales. Built and delivered event and cultural platforms across Cannes, New York, and London.</p></div>
+    <div class="team-box fade"><span class="t-role">Chief Commercial Officer &amp; Partners · Project Lead</span><div class="t-name">Tori Abiola</div><p class="t-bio">27 years across Africa, Middle East, Asia and Latin America. Delivered 100+ global events and 50+ executive programmes. Generated £50M+ in sponsorship and programme revenues. Trade, investment and venture capital strategist.</p></div>
+    <div class="team-box fade"><span class="t-role">Strategic Communications</span><div class="t-name">Jillian Nysedt</div><p class="t-bio">African Political Communications Strategist of the Year (2024). Specialist in geopolitical risk and media relations. Previously Weber Shandwick, Washington D.C. MA International Relations, King's College London.</p></div>
+    <div class="team-box fade"><span class="t-role">Event Production · French Riviera</span><div class="t-name">Raffael Morrone</div><p class="t-bio">Founder of Canne Event Agency. 15+ years delivering high-profile events on the French Riviera including Cannes, MIPIM, and the Film Festival. Clients include L'Oréal, Variety, Spotify, and Canva.</p></div>
+    <div class="team-box fade"><span class="t-role">Finance &amp; Development</span><div class="t-name">Craig Otter</div><p class="t-bio">20+ years in investment, advisory, and private sector growth in emerging markets. Former European Bank for Reconstruction and Development. ACCA-qualified. Former Editor, The Economist.</p></div>
+    <div class="team-box fade"><span class="t-role">CMO &amp; CCO</span><div class="t-name">Nikki Sehgal</div><p class="t-bio">General Manager of Media For All CIC. Co-chairs the Advertising Association's Asian Talent Working Group. WACL Talent Award winner. Member of The Media Leader Future 100 Club.</p></div>
+    <div class="team-box fade"><span class="t-role">COO</span><div class="t-name">Dudley Sawyerr</div><p class="t-bio">15+ years in business strategy, operations, and stakeholder engagement. Leads operational delivery and complex partnerships. Lectures in MBA sessions at SOAS, University of London.</p></div>
+    <div class="team-box fade"><span class="t-role">Co-Host · African Diamond Manufacturers Association</span><div class="t-name">Mr António Oliveira</div><p class="t-bio">Co-host of the African Diamond Showcase and the Night of African Diamonds. A leading figure in the African diamond manufacturing sector, bringing deep industry expertise and a pan-African network to the platform's commercial and advocacy mission.</p></div>
+    <div class="team-box fade"><span class="t-role">Business Development &amp; Partnerships</span><div class="t-name">Alliance Development Partners</div><p class="t-bio">Lead commercial activation and partnership strategy organisation — connecting Africa's diamond industry with the global commercial and investment network across all platform activations and trade missions.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec" id="contact">
+  <div class="contact-l">
+    <span class="sec-label fade">Get Involved</span>
+    <h2 class="sec-title fade">Join the<br><em>platform</em></h2>
+    <p class="sec-body fade" style="margin-bottom:0;">Whether you are an African diamond industry principal, a global luxury brand, an investor, or a cultural leader — there is a place for you in the African Natural Diamonds platform.</p>
+    <span class="ci-label">I am interested in</span>
+    <div>
+      <div class="ci-opt"><a href="mailto:tori@88percent.co.uk?subject=Attendance — African Diamond Showcase Cannes 2026">Attending the African Diamond Showcase — Cannes 2026</a></div>
+      <div class="ci-opt"><a href="mailto:tori@88percent.co.uk?subject=Sponsorship &amp; Partnership Enquiry">Sponsorship &amp; Partnership</a></div>
+      <div class="ci-opt"><a href="mailto:tori@88percent.co.uk?subject=Angola Trade Mission Enquiry">Angola Trade Mission</a></div>
+      <div class="ci-opt"><a href="mailto:tori@88percent.co.uk?subject=Platform Partnership Enquiry">Platform Partnership</a></div>
+      <div class="ci-opt"><a href="mailto:tori@88percent.co.uk?subject=General Enquiry — africandiamonds.world">General Enquiry</a></div>
+    </div>
+  </div>
+  <div class="contact-r">
+    <span class="sec-label-lt">Direct Enquiries</span>
+    <h2 class="sec-title-lt fade" style="font-size:clamp(26px,3vw,40px);margin-bottom:12px;">Request<br><em>information</em></h2>
+    <p class="sec-body-lt fade" style="font-size:13px;margin-bottom:0;">The African Diamond Showcase at Cannes 2026 is by invitation only. For attendance, sponsorship, the Angola Trade Mission, or platform partnership, contact the project lead directly.</p>
+    <a href="mailto:tori@88percent.co.uk" class="contact-email fade">tori@88percent.co.uk</a>
+    <span class="ci-label" style="color:rgba(232,217,190,0.2);margin-top:24px;">Platform partners</span>
+    <p class="partner-notes">88Percent &nbsp;·&nbsp; African Diamond Council (ADC)<br>African Diamond Manufacturers Association (ADMA)<br>Capital 88 &nbsp;·&nbsp; Alliance Development Partners</p>
+  </div>
+</section>
+
+<!-- CTA — warm golden diamond image -->
+<div class="cta-sec">
+  <div class="cta-bg">
+    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1800&q=90" alt="High jewellery diamond" loading="lazy">
+  </div>
+  <div class="cta-content">
+    <div class="cta-gem">
+      <svg width="64" height="76" viewBox="0 0 80 92" fill="none">
+        <polygon points="40,2 78,24 78,68 40,90 2,68 2,24" stroke="#E8D9BE" stroke-width="0.6" fill="none"/>
+        <polygon points="40,18 64,31 64,61 40,74 16,61 16,31" stroke="#E8D9BE" stroke-width="0.35" fill="none"/>
+        <line x1="40" y1="2" x2="40" y2="90" stroke="#E8D9BE" stroke-width="0.25"/>
+        <line x1="2" y1="24" x2="78" y2="68" stroke="#E8D9BE" stroke-width="0.25"/>
+        <line x1="78" y1="24" x2="2" y2="68" stroke="#E8D9BE" stroke-width="0.25"/>
+        <line x1="2" y1="46" x2="78" y2="46" stroke="#E8D9BE" stroke-width="0.25"/>
+      </svg>
+    </div>
+    <h2 class="cta-title fade">Origin.<br><em>To aspiration.</em></h2>
+    <span class="cta-sub fade">africandiamonds.world · The Global Platform</span>
+    <p class="cta-body fade">Perception to commercial traction. Global consumer demand growth. Socio-economic impact. Building a global ecosystem that sustains Africa's natural diamond industry and shares its prosperity — from origin to aspiration.</p>
+    <div class="cta-btns fade">
+      <a href="mailto:tori@88percent.co.uk" class="btn btn-gold">Enquire Now</a>
+      <a href="mailto:tori@88percent.co.uk?subject=Cannes 2026 Information Request" class="btn btn-ghost-light">Cannes 2026 Information</a>
+    </div>
+    <p class="cta-e fade">tori@88percent.co.uk &nbsp;·&nbsp; <a href="https://africandiamonds.world">africandiamonds.world</a></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="f-logo">African Natural Diamonds · The Global Platform</div>
+    <div class="f-sub">africandiamonds.world &nbsp;·&nbsp; 88Percent · ADC · ADMA · Capital 88 · Alliance Development Partners</div>
+  </div>
+  <div class="f-r">
+    <p>Next activation: Cannes · 22 June 2026</p>
+    <p>Angola Trade Mission · 2026/27</p>
+    <p><a href="mailto:tori@88percent.co.uk">tori@88percent.co.uk</a></p>
+    <p><a href="https://africandiamonds.world">africandiamonds.world</a></p>
+  </div>
+</footer>
+
+<script>
+// Fade observer
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);obs.unobserve(e.target);}
+  });
+},{threshold:0.07,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.fade,.fade-l,.fade-r').forEach(el=>obs.observe(el));
+
+// Nav scroll
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>40);
+},{passive:true});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// Mobile nav
+const ham=document.getElementById('ham');
+let open=false;
+ham.addEventListener('click',()=>{
+  open=!open;
+  const links=document.querySelector('.nav-links');
+  links.style.cssText=open?'display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:rgba(250,246,239,0.98);padding:24px 20px;gap:20px;border-bottom:0.5px solid rgba(180,160,120,0.25);z-index:499;backdrop-filter:blur(12px);':'display:none;';
+});
+</script>
+</body>
+</html>
