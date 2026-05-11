@@ -52,7 +52,7 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .nav-logo-main{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:16px;letter-spacing:3px;color:var(--ink);text-transform:uppercase;}
 .nav-logo-sub{font-size:11px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--dim);}
 .nav-links{display:flex;gap:32px;align-items:center;}
-.nav-links a{font-size:12px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--mid);transition:color 0.2s;}
+.nav-links a{font-size:12px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:var(--mid);transition:color 0.2s;}
 .nav-links a:hover{color:var(--gold);}
 .nav-cta{border:0.5px solid var(--gold)!important;color:var(--gold)!important;padding:8px 22px;transition:background 0.2s,color 0.2s!important;}
 .nav-cta:hover{background:var(--gold)!important;color:var(--white)!important;}
@@ -82,7 +82,7 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .hero h1{
   font-family:'Cormorant Garamond',serif;font-weight:300;
   font-size:clamp(58px,8vw,108px);
-  line-height:0.92;letter-spacing:-1px;color:var(--white);margin-bottom:28px;
+  line-height:1.05;letter-spacing:-1px;color:var(--white);margin-bottom:28px;
 }
 .hero h1 em{font-style:italic;color:var(--champagne);}
 .hero-meta{
@@ -93,13 +93,13 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .hero-meta-item{padding:0 32px 0 0;margin-right:32px;border-right:0.5px solid rgba(232,217,190,0.2);}
 .hero-meta-item:last-of-type{border-right:none;}
 .hero-meta-label{font-size:11px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:rgba(232,217,190,0.85);margin-bottom:5px;display:block;}
-.hero-meta-val{font-size:17px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.5;}
+.hero-meta-val{font-size:17px;font-weight:400;color:rgba(255,255,255,0.95);line-height:1.5;}
 .hero-btns{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:28px;}
-.btn{display:inline-block;font-family:'Jost',sans-serif;font-size:13px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;padding:16px 36px;transition:all 0.25s;cursor:pointer;}
-.btn-gold{background:var(--warm);color:var(--white);border:0.5px solid var(--warm);}
+.btn{display:inline-block;font-family:'Jost',sans-serif;font-size:13px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;padding:16px 36px;transition:all 0.25s;cursor:pointer;}
+.btn-gold{background:var(--warm);color:var(--white);border:1px solid var(--warm);}
 .btn-gold:hover{background:var(--gold);border-color:var(--gold);}
-.btn-ghost-light{background:transparent;color:rgba(255,255,255,0.7);border:0.5px solid rgba(255,255,255,0.3);}
-.btn-ghost-light:hover{border-color:rgba(255,255,255,0.7);color:var(--white);}
+.btn-ghost-light{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.65);}
+.btn-ghost-light:hover{border-color:var(--white);color:var(--white);}
 .btn-dark{background:var(--ink);color:var(--cream);border:0.5px solid var(--ink);}
 .btn-dark:hover{background:var(--dark);}
 .btn-outline{background:transparent;color:var(--gold);border:0.5px solid var(--gold);}
@@ -126,8 +126,8 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .sec-title em{font-style:italic;color:var(--gold);}
 .sec-title-lt{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(36px,3.5vw,58px);line-height:1.0;letter-spacing:-0.5px;color:var(--white);margin-bottom:20px;}
 .sec-title-lt em{font-style:italic;color:var(--champagne);}
-.sec-body{font-size:17px;font-weight:300;line-height:1.9;color:var(--mid);max-width:640px;}
-.sec-body-lt{font-size:17px;font-weight:300;line-height:1.9;color:rgba(232,217,190,0.92);max-width:640px;}
+.sec-body{font-size:17px;font-weight:400;line-height:1.9;color:var(--mid);max-width:640px;}
+.sec-body-lt{font-size:17px;font-weight:400;line-height:1.9;color:rgba(232,217,190,0.92);max-width:640px;}
 
 /* ── MISSION — split ── */
 .mission{display:grid;grid-template-columns:1fr 1fr;min-height:680px;}
@@ -143,7 +143,7 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .pillar-row{padding:18px 0;border-bottom:0.5px solid var(--rule);display:flex;gap:18px;align-items:flex-start;}
 .pillar-n{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:22px;color:var(--bronze);flex-shrink:0;line-height:1;padding-top:2px;}
 .pillar-t{font-size:16px;font-weight:400;color:var(--ink);}
-.pillar-d{font-size:15px;font-weight:300;color:var(--mid);line-height:1.7;margin-top:5px;}
+.pillar-d{font-size:15px;font-weight:400;color:var(--mid);line-height:1.7;margin-top:5px;}
 
 /* ── FULL BLEED PHOTO BREAK ── */
 .photo-break{position:relative;height:72vh;min-height:480px;overflow:hidden;}
@@ -155,11 +155,11 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .pb-text{padding:0 80px;max-width:600px;}
 .pb-text-r{margin-left:auto;text-align:right;}
 .pb-label-t{font-size:12px;font-weight:300;letter-spacing:4px;text-transform:uppercase;color:var(--champagne);margin-bottom:18px;display:block;opacity:0.95;}
-.pb-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,70px);line-height:0.95;letter-spacing:-0.5px;color:var(--white);}
+.pb-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,70px);line-height:1.05;letter-spacing:-0.5px;color:var(--white);}
 .pb-title em{font-style:italic;color:var(--champagne);}
 .pb-rule{width:40px;height:0.5px;background:rgba(232,217,190,0.35);margin:20px 0;}
 .pb-rule-r{margin-left:auto;}
-.pb-body{font-size:17px;font-weight:300;color:rgba(255,255,255,0.92);line-height:1.85;}
+.pb-body{font-size:17px;font-weight:400;color:rgba(255,255,255,0.92);line-height:1.85;}
 
 /* ── STATS BAND — warm dark ── */
 .stats-band{background:var(--ink);padding:100px 56px;}
@@ -178,13 +178,13 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .ev-img{position:relative;height:300px;overflow:hidden;}
 .ev-img img{height:100%;object-fit:cover;transition:transform 0.9s ease;}
 .ev-card:hover .ev-img img{transform:scale(1.05);}
-.ev-tag{position:absolute;top:20px;left:20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--white);border:0.5px solid rgba(255,255,255,0.5);padding:6px 14px;font-weight:300;background:rgba(28,24,20,0.3);backdrop-filter:blur(4px);}
+.ev-tag{position:absolute;top:20px;left:20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--white);border:0.5px solid rgba(255,255,255,0.5);padding:6px 14px;font-weight:400;background:rgba(28,24,20,0.6);backdrop-filter:blur(4px);}
 .ev-body{padding:40px 44px;}
 .ev-kicker{font-size:11px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--bronze);margin-bottom:12px;display:block;}
 .ev-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;color:var(--ink);margin-bottom:14px;line-height:1.15;}
-.ev-desc{font-size:16px;font-weight:300;color:var(--mid);line-height:1.85;margin-bottom:18px;}
+.ev-desc{font-size:16px;font-weight:400;color:var(--mid);line-height:1.85;margin-bottom:18px;}
 .ev-list{list-style:none;}
-.ev-list li{font-size:15px;font-weight:300;color:var(--mid);padding:9px 0;border-bottom:0.5px solid var(--rule);display:flex;gap:12px;line-height:1.55;}
+.ev-list li{font-size:15px;font-weight:400;color:var(--mid);padding:9px 0;border-bottom:0.5px solid var(--rule);display:flex;gap:12px;line-height:1.55;}
 .ev-list li::before{content:'—';color:var(--bronze);flex-shrink:0;}
 
 /* ── PAST EDITIONS — champagne ── */
@@ -194,9 +194,9 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .past-card:first-child{border-right:0.5px solid var(--rule);}
 .past-yr{font-size:11px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--bronze);margin-bottom:10px;display:block;}
 .past-title-t{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:24px;color:var(--ink);margin-bottom:14px;line-height:1.2;}
-.past-body-t{font-size:16px;font-weight:300;color:var(--mid);line-height:1.85;margin-bottom:16px;}
+.past-body-t{font-size:16px;font-weight:400;color:var(--mid);line-height:1.85;margin-bottom:16px;}
 .past-ul{list-style:none;}
-.past-ul li{font-size:15px;font-weight:300;color:var(--mid);padding:8px 0;border-bottom:0.5px solid var(--rule);display:flex;gap:10px;line-height:1.6;}
+.past-ul li{font-size:15px;font-weight:400;color:var(--mid);padding:8px 0;border-bottom:0.5px solid var(--rule);display:flex;gap:10px;line-height:1.6;}
 .past-ul li::before{content:'—';flex-shrink:0;color:var(--bronze);}
 
 /* ── BRANDS STRIP ── */
@@ -212,23 +212,23 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .cc:first-child{border-right:0.5px solid var(--rule);}
 .cc-label{font-size:12px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--bronze);margin-bottom:22px;padding-bottom:12px;border-bottom:0.5px solid var(--rule);display:block;}
 .cc-list{list-style:none;}
-.cc-list li{padding:14px 0;border-bottom:0.5px solid var(--rule);font-size:16px;font-weight:300;color:var(--mid);display:flex;gap:14px;align-items:flex-start;line-height:1.6;}
+.cc-list li{padding:14px 0;border-bottom:0.5px solid var(--rule);font-size:16px;font-weight:400;color:var(--mid);display:flex;gap:14px;align-items:flex-start;line-height:1.6;}
 .cc-list li strong{color:var(--ink);font-weight:400;}
 .cc-list li::before{content:'—';color:var(--bronze);flex-shrink:0;margin-top:2px;}
 .invite-strip{padding:32px 56px;background:var(--cream2);border-top:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);display:flex;gap:24px;align-items:flex-start;}
 .is-mark{font-size:20px;color:var(--warm);flex-shrink:0;margin-top:3px;opacity:0.4;}
 .is-label{font-size:12px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--bronze);margin-bottom:8px;display:block;}
-.is-body{font-size:16px;font-weight:300;color:var(--mid);line-height:1.85;}
+.is-body{font-size:16px;font-weight:400;color:var(--mid);line-height:1.85;}
 
 /* ── ANGOLA — warm split ── */
 .angola-sec{display:grid;grid-template-columns:1fr 1fr;min-height:560px;}
 .angola-img{position:relative;overflow:hidden;}
 .angola-img img{height:100%;object-fit:cover;transition:transform 1.2s ease;}
 .angola-sec:hover .angola-img img{transform:scale(1.04);}
-.angola-tag{position:absolute;top:32px;left:32px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--white);border:0.5px solid rgba(255,255,255,0.4);padding:7px 16px;font-weight:300;background:rgba(28,24,20,0.25);}
+.angola-tag{position:absolute;top:32px;left:32px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--white);border:0.5px solid rgba(255,255,255,0.5);padding:7px 16px;font-weight:400;background:rgba(28,24,20,0.6);}
 .angola-text{background:var(--ink);padding:80px 64px;display:flex;flex-direction:column;justify-content:center;}
 .angola-text p{margin-bottom:18px;}
-.angola-hl{font-size:16px;font-weight:300;color:var(--champagne);border-top:0.5px solid rgba(232,217,190,0.15);padding-top:20px;margin-top:6px;}
+.angola-hl{font-size:16px;font-weight:400;color:var(--champagne);border-top:0.5px solid rgba(232,217,190,0.3);padding-top:20px;margin-top:6px;}
 
 /* ── BENEFITS — cream ── */
 .benefits-sec{background:var(--white);padding:100px 56px;}
@@ -237,36 +237,36 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .benefit-box:hover{background:var(--cream);}
 .b-n{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:50px;color:var(--bronze);line-height:1;margin-bottom:16px;display:block;}
 .b-t{font-size:17px;font-weight:400;color:var(--ink);margin-bottom:12px;}
-.b-d{font-size:15px;font-weight:300;color:var(--mid);line-height:1.8;}
+.b-d{font-size:15px;font-weight:400;color:var(--mid);line-height:1.8;}
 
 /* ── OUTCOMES — dark warm ── */
 .outcomes-sec{background:var(--dark);padding:100px 56px;}
 .outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:0.5px solid rgba(232,217,190,0.1);border-left:0.5px solid rgba(232,217,190,0.1);}
 .out-box{padding:36px 28px;border-right:0.5px solid rgba(232,217,190,0.1);border-bottom:0.5px solid rgba(232,217,190,0.1);}
 .out-t{font-size:17px;font-weight:400;color:var(--champagne);margin-bottom:12px;line-height:1.4;}
-.out-d{font-size:15px;font-weight:300;color:rgba(232,217,190,0.88);line-height:1.75;}
+.out-d{font-size:15px;font-weight:400;color:rgba(232,217,190,0.92);line-height:1.75;}
 
 /* ── TEAM ── */
 .team-sec{background:var(--ink);padding:100px 56px;}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:0.5px solid rgba(232,217,190,0.08);border-left:0.5px solid rgba(232,217,190,0.08);}
 .team-box{padding:36px 28px;border-right:0.5px solid rgba(232,217,190,0.08);border-bottom:0.5px solid rgba(232,217,190,0.08);transition:background 0.2s;}
 .team-box:hover{background:rgba(232,217,190,0.03);}
-.t-role{font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:9px;display:block;}
+.t-role{font-size:11px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:var(--warm);margin-bottom:9px;display:block;}
 .t-name{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:24px;color:var(--champagne);margin-bottom:12px;line-height:1.1;}
-.t-bio{font-size:15px;font-weight:300;color:rgba(232,217,190,0.85);line-height:1.75;}
+.t-bio{font-size:15px;font-weight:400;color:rgba(232,217,190,0.88);line-height:1.75;}
 
 /* ── CONTACT ── */
 .contact-sec{display:grid;grid-template-columns:1fr 1fr;}
 .contact-l{background:var(--cream2);padding:100px 56px;border-right:0.5px solid var(--rule);}
 .contact-r{background:var(--ink);padding:100px 56px;display:flex;flex-direction:column;justify-content:center;}
 .ci-label{font-size:12px;font-weight:300;letter-spacing:2.5px;text-transform:uppercase;color:var(--bronze);margin-top:28px;margin-bottom:10px;display:block;}
-.ci-opt{padding:15px 0;border-bottom:0.5px solid var(--rule);font-size:16px;font-weight:300;color:var(--mid);display:flex;justify-content:space-between;transition:color 0.2s;}
+.ci-opt{padding:15px 0;border-bottom:0.5px solid var(--rule);font-size:16px;font-weight:400;color:var(--mid);display:flex;justify-content:space-between;transition:color 0.2s;}
 .ci-opt:hover{color:var(--bronze);}
 .ci-opt a{display:flex;width:100%;justify-content:space-between;}
 .ci-opt a::after{content:'→';font-size:14px;color:var(--bronze);}
 .contact-email{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:24px;color:var(--champagne);display:block;border-top:0.5px solid rgba(232,217,190,0.1);padding-top:20px;margin-top:6px;transition:opacity 0.2s;}
 .contact-email:hover{opacity:0.6;}
-.partner-notes{font-size:14px;font-weight:300;color:rgba(232,217,190,0.8);line-height:2.2;margin-top:10px;}
+.partner-notes{font-size:14px;font-weight:400;color:rgba(232,217,190,0.88);line-height:2.2;margin-top:10px;}
 
 /* ── CTA ── */
 .cta-sec{position:relative;height:80vh;min-height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
@@ -276,10 +276,10 @@ nav.scrolled{box-shadow:0 1px 20px rgba(180,150,90,0.08);}
 .cta-content{position:relative;z-index:2;text-align:center;padding:0 56px;max-width:720px;}
 .cta-gem{margin:0 auto 36px;display:flex;justify-content:center;}
 .cta-gem svg{opacity:0.25;}
-.cta-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(42px,6vw,76px);color:var(--white);line-height:0.95;letter-spacing:-0.5px;margin-bottom:10px;}
+.cta-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(42px,6vw,76px);color:var(--white);line-height:1.05;letter-spacing:-0.5px;margin-bottom:10px;}
 .cta-title em{font-style:italic;color:var(--champagne);}
 .cta-sub{font-size:12px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:rgba(232,217,190,0.9);margin-bottom:28px;display:block;}
-.cta-body{font-size:17px;font-weight:300;line-height:1.95;color:rgba(255,255,255,0.92);margin-bottom:40px;}
+.cta-body{font-size:17px;font-weight:400;line-height:1.95;color:rgba(255,255,255,0.92);margin-bottom:40px;}
 .cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
 .cta-e{margin-top:24px;font-size:14px;font-weight:300;color:rgba(232,217,190,0.8);}
 .cta-e a{color:var(--champagne);transition:color 0.2s;}
@@ -290,7 +290,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
 .f-logo{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:16px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(232,217,190,0.85);margin-bottom:6px;}
 .f-sub{font-size:12px;font-weight:300;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,217,190,0.7);}
 .f-r{text-align:right;}
-.f-r p{font-size:14px;font-weight:300;color:rgba(232,217,190,0.8);line-height:2.1;}
+.f-r p{font-size:14px;font-weight:400;color:rgba(232,217,190,0.88);line-height:2.1;}
 .f-r a{color:var(--champagne);transition:color 0.2s;}
 .f-r a:hover{color:var(--white);}
 
@@ -364,7 +364,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
 <!-- HERO — real Cannes Croisette -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1800&q=90" alt="Cannes French Riviera" loading="eager">
+    <img src="images/cannesatnight.jpeg" alt="Luxury Cannes villa at night — African Diamond Showcase" loading="eager" style="object-position:center 55%;">
   </div>
   <div class="hero-content">
     <div class="hero-eyebrow fade">africandiamonds.world &nbsp;·&nbsp; The Global Platform</div>
@@ -404,7 +404,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
 <section class="mission" id="mission">
   <div class="mission-img fade-l">
     <!-- Real diamond close-up — sparkle and light -->
-    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=90" alt="Natural diamond — light and sparkle">
+    <img src="images/womandiamond.jpeg" alt="African natural diamond jewellery — luxury and aspiration" style="object-position:center 20%;">
     <span class="mission-img-cap">Where origin meets opportunity</span>
   </div>
   <div class="mission-text">
@@ -433,7 +433,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
 
 <!-- PHOTO BREAK 1 — Cannes Showcase event feeling — golden hour terrace -->
 <div class="photo-break">
-  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1800&q=90" alt="Luxury Cannes Riviera villa">
+  <img src="images/cannesatnight.jpeg" alt="Luxury Cannes villa — Night of African Diamonds" style="object-position:center 60%;">
   <div class="pb-overlay pb-overlay-l">
     <div class="pb-text fade">
       <span class="pb-label-t">22 June 2026 · Cannes, France · By Invitation Only</span>
@@ -499,7 +499,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
     <!-- 22 JUNE -->
     <div class="ev-card">
       <div class="ev-img">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85" alt="Cannes French Riviera" loading="lazy">
+        <img src="images/cannesatnight.jpeg" alt="Luxury Cannes villa — Night of African Diamonds" loading="lazy" style="object-position:center 60%;">
         <div class="ev-tag">22 June · Private Villa · Cannes</div>
       </div>
       <div class="ev-body fade">
@@ -556,7 +556,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
     <!-- YEAR ROUND -->
     <div class="ev-card">
       <div class="ev-img">
-        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=900&q=85" alt="Year-round relationship pipeline" loading="lazy">
+        <img src="images/angola-beauty.jpeg" alt="Angola — year-round trade mission and relationship pipeline" loading="lazy" style="object-position:center 65%;">
         <div class="ev-tag">Platform · Year-Round</div>
       </div>
       <div class="ev-body fade">
@@ -622,7 +622,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
 
 <!-- PHOTO BREAK 2 — Diamond close up sparkle -->
 <div class="photo-break">
-  <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1800&q=90" alt="Natural diamond facets and light">
+  <img src="images/diamond.jpeg" alt="African natural diamond — origin of luxury" style="object-position:center center;">
   <div class="pb-overlay pb-overlay-r">
     <div class="pb-text pb-text-r fade">
       <span class="pb-label-t" style="display:block;text-align:right;">The origin of luxury</span>
@@ -676,7 +676,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
 <div class="angola-sec" id="angola">
   <div class="angola-img">
     <!-- African savanna / dramatic African landscape -->
-    <img src="https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?w=900&q=85" alt="Angola — African diamond trade mission" loading="lazy">
+    <img src="images/angola%20coast.jpeg" alt="Angola coastline — African diamond trade mission" loading="lazy" style="object-position:center 40%;">
     <div class="angola-tag">Upcoming · Angola · 2026/27</div>
   </div>
   <div class="angola-text">
@@ -704,7 +704,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
 
 <!-- PHOTO BREAK 3 — Golden hour elegant event / Cannes terrace -->
 <div class="photo-break">
-  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=85" alt="The Night of African Diamonds — elegant evening event">
+  <img src="images/dismondcraft.jpeg" alt="The Night of African Diamonds — diamond craftsmanship" style="object-position:center center;filter:brightness(0.85);">
   <div class="pb-overlay pb-overlay-l">
     <div class="pb-text fade">
       <span class="pb-label-t">22 June 2026 · French Riviera · By Invitation Only</span>
@@ -737,32 +737,32 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
     <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
       <div style="font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:9px;">Co-Host · Chair of Proceedings · Advisory Board</div>
       <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;color:var(--ink);margin-bottom:12px;">Dr M'zée Fula-Ngenge</div>
-      <p style="font-size:15px;font-weight:300;color:var(--mid);line-height:1.75;">Veteran mining engineer and global economist with 40+ years in the diamond industry. Chairman of the African Diamond Council. Co-Host and Chair of Proceedings of the African Diamond Showcase.</p>
+      <p style="font-size:15px;font-weight:400;color:var(--mid);line-height:1.75;">Veteran mining engineer and global economist with 40+ years in the diamond industry. Chairman of the African Diamond Council. Co-Host and Chair of Proceedings of the African Diamond Showcase.</p>
     </div>
     <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
       <div style="font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:9px;">Advisory Board · CMO, Cassava Technologies</div>
       <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;color:var(--ink);margin-bottom:12px;">Ifeoma Jibunoh</div>
-      <p style="font-size:15px;font-weight:300;color:var(--mid);line-height:1.75;">Chief Marketing Officer at Cassava Technologies. 20+ years across technology, FMCG and payments. Senior roles at Mastercard and Heineken. Brand strategy and storytelling across Africa and international markets.</p>
+      <p style="font-size:15px;font-weight:400;color:var(--mid);line-height:1.75;">Chief Marketing Officer at Cassava Technologies. 20+ years across technology, FMCG and payments. Senior roles at Mastercard and Heineken. Brand strategy and storytelling across Africa and international markets.</p>
     </div>
     <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
       <div style="font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:9px;">Advisory Board · Executive Chairman, Silverbacks Holdings</div>
       <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;color:var(--ink);margin-bottom:12px;">Ibrahim Sagna</div>
-      <p style="font-size:15px;font-weight:300;color:var(--mid);line-height:1.75;">Senegalese financier and Executive Chairman of Silverbacks Holdings. 20+ years global finance across the IMF, Afreximbank, and private equity. Focused on scaling African-born businesses globally.</p>
+      <p style="font-size:15px;font-weight:400;color:var(--mid);line-height:1.75;">Senegalese financier and Executive Chairman of Silverbacks Holdings. 20+ years global finance across the IMF, Afreximbank, and private equity. Focused on scaling African-born businesses globally.</p>
     </div>
     <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
       <div style="font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:9px;">Advisory Board · Senior Fellow &amp; former CMCO, Mastercard</div>
       <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;color:var(--ink);margin-bottom:12px;">Raja Rajamannar</div>
-      <p style="font-size:15px;font-weight:300;color:var(--mid);line-height:1.75;">Globally recognised for transforming modern marketing through data, creativity and culture. Champion of innovation at the intersection of brand, technology and business growth.</p>
+      <p style="font-size:15px;font-weight:400;color:var(--mid);line-height:1.75;">Globally recognised for transforming modern marketing through data, creativity and culture. Champion of innovation at the intersection of brand, technology and business growth.</p>
     </div>
     <div style="padding:36px 32px;border-right:0.5px solid var(--rule);border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
       <div style="font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:9px;">Advisory Board · Head of Original Brands, Sky</div>
       <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;color:var(--ink);margin-bottom:12px;">Tim Yaw Struthers</div>
-      <p style="font-size:15px;font-weight:300;color:var(--mid);line-height:1.75;">Award-winning Scottish-Ghanaian film and TV executive. Head of Original Brands at Sky. Two decades at Universal and major studios. Champion of the African creative economy.</p>
+      <p style="font-size:15px;font-weight:400;color:var(--mid);line-height:1.75;">Award-winning Scottish-Ghanaian film and TV executive. Head of Original Brands at Sky. Two decades at Universal and major studios. Champion of the African creative economy.</p>
     </div>
     <div style="padding:36px 32px;border-bottom:0.5px solid var(--rule);background:var(--white);" class="fade">
       <div style="font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:9px;">Advisory Board · Founder, Gravana</div>
       <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;color:var(--ink);margin-bottom:12px;">Cesar Christoforidis</div>
-      <p style="font-size:15px;font-weight:300;color:var(--mid);line-height:1.75;">Global sales, marketing and creator economy leader. Founder of Gravana, an AI platform helping brands decode data, culture and commerce across emerging markets.</p>
+      <p style="font-size:15px;font-weight:400;color:var(--mid);line-height:1.75;">Global sales, marketing and creator economy leader. Founder of Gravana, an AI platform helping brands decode data, culture and commerce across emerging markets.</p>
     </div>
   </div>
 </section>
@@ -813,7 +813,7 @@ footer{background:var(--ink);border-top:0.5px solid rgba(232,217,190,0.08);paddi
 <!-- CTA — warm golden diamond image -->
 <div class="cta-sec">
   <div class="cta-bg">
-    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1800&q=90" alt="High jewellery diamond" loading="lazy">
+    <img src="images/womandiamond.jpeg" alt="African natural diamond jewellery" loading="lazy" style="object-position:center 15%;">
   </div>
   <div class="cta-content">
     <div class="cta-gem">
