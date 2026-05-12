@@ -1377,6 +1377,86 @@
         transform: translate(0, 0) !important;
       }
 
+      /* ── DAY TABS ── */
+      .day-tabs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 0.5px solid var(--rule);
+        border-bottom: 0.5px solid var(--rule);
+        background: var(--white);
+      }
+      .day-tab {
+        padding: 24px 20px;
+        text-align: center;
+        border-right: 0.5px solid var(--rule);
+      }
+      .day-tab:last-child { border-right: none; }
+      .day-tab-tinted { background: var(--cream2); }
+      .day-tab-day {
+        display: block;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--bronze);
+        margin-bottom: 6px;
+      }
+      .day-tab-date {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 1;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+      .day-tab-desc {
+        display: block;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: var(--mid);
+      }
+
+      /* ── ADVISORY BOARD GRID ── */
+      .adv-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin-top: 48px;
+        border-top: 0.5px solid var(--rule);
+        border-left: 0.5px solid var(--rule);
+      }
+      .adv-card {
+        padding: 36px 32px;
+        border-right: 0.5px solid var(--rule);
+        border-bottom: 0.5px solid var(--rule);
+        background: var(--white);
+      }
+      .adv-card:nth-child(3n) { border-right: none; }
+      .adv-card:nth-child(n+4) { border-bottom: none; }
+      .adv-card-role {
+        font-size: 11px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--bronze);
+        margin-bottom: 9px;
+      }
+      .adv-card-name {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-size: 25px;
+        color: var(--ink);
+        margin-bottom: 12px;
+      }
+      .adv-card-bio {
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--mid);
+        line-height: 1.75;
+      }
+
       /* ── RESPONSIVE ── */
       @media (max-width: 960px) {
         nav {
@@ -1476,6 +1556,20 @@
         .brands-strip {
           padding: 24px 20px;
         }
+        .day-tabs {
+          grid-template-columns: 1fr 1fr;
+        }
+        .day-tab:nth-child(2) { border-right: none; }
+        .day-tab { border-bottom: 0.5px solid var(--rule); }
+        .day-tab:nth-child(3),
+        .day-tab:nth-child(4) { border-bottom: none; }
+        .adv-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .adv-card:nth-child(3n) { border-right: 0.5px solid var(--rule); }
+        .adv-card:nth-child(2n) { border-right: none; }
+        .adv-card:nth-child(n+4) { border-bottom: 0.5px solid var(--rule); }
+        .adv-card:nth-child(n+5) { border-bottom: none; }
         .benefits-grid,
         .outcomes-grid,
         .team-grid {
@@ -1503,6 +1597,32 @@
         }
       }
       @media (max-width: 560px) {
+        .day-tabs {
+          grid-template-columns: 1fr;
+        }
+        .day-tab,
+        .day-tab:nth-child(2),
+        .day-tab:nth-child(3),
+        .day-tab:nth-child(4) {
+          border-right: none;
+          border-bottom: 0.5px solid var(--rule);
+        }
+        .day-tab:last-child { border-bottom: none; }
+        .adv-grid {
+          grid-template-columns: 1fr;
+        }
+        .adv-card,
+        .adv-card:nth-child(2n),
+        .adv-card:nth-child(3n) { border-right: none; }
+        .adv-card:nth-child(n+4),
+        .adv-card:nth-child(n+5) { border-bottom: 0.5px solid var(--rule); }
+        .adv-card:last-child { border-bottom: none; }
+        .pb-item {
+          flex: 1 1 100%;
+          border-right: none;
+          border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+        }
+        .pb-item:last-child { border-bottom: none; }
         .benefits-grid,
         .outcomes-grid,
         .team-grid,
@@ -1770,170 +1890,26 @@
       </div>
 
       <!-- DAY TABS -->
-      <div
-        style="
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          border-top: 0.5px solid var(--rule);
-          border-bottom: 0.5px solid var(--rule);
-          background: var(--white);
-        "
-      >
-        <div
-          style="
-            padding: 20px 28px;
-            border-right: 0.5px solid var(--rule);
-            text-align: center;
-          "
-        >
-          <div
-            style="
-              font-size: 12px;
-              font-weight: 300;
-              letter-spacing: 2.5px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 5px;
-            "
-          >
-            Monday
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 26px;
-              color: var(--ink);
-            "
-          >
-            22 June
-          </div>
-          <div
-            style="
-              font-size: 14px;
-              font-weight: 300;
-              color: var(--mid);
-              margin-top: 6px;
-            "
-          >
-            African Diamond Showcase<br />&amp; Night of Diamonds
-          </div>
+      <div class="day-tabs">
+        <div class="day-tab">
+          <span class="day-tab-day">Monday</span>
+          <span class="day-tab-date">22 June</span>
+          <span class="day-tab-desc">African Diamond Showcase<br>&amp; Night of Diamonds</span>
         </div>
-        <div
-          style="
-            padding: 20px 28px;
-            border-right: 0.5px solid var(--rule);
-            text-align: center;
-            background: var(--cream2);
-          "
-        >
-          <div
-            style="
-              font-size: 12px;
-              font-weight: 300;
-              letter-spacing: 2.5px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 5px;
-            "
-          >
-            Tuesday
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 26px;
-              color: var(--ink);
-            "
-          >
-            23 June
-          </div>
-          <div
-            style="
-              font-size: 14px;
-              font-weight: 300;
-              color: var(--mid);
-              margin-top: 6px;
-            "
-          >
-            Private 1:1 Meetings<br />&amp; Client Activations
-          </div>
+        <div class="day-tab day-tab-tinted">
+          <span class="day-tab-day">Tuesday</span>
+          <span class="day-tab-date">23 June</span>
+          <span class="day-tab-desc">Private 1:1 Meetings<br>&amp; Client Activations</span>
         </div>
-        <div
-          style="
-            padding: 20px 28px;
-            border-right: 0.5px solid var(--rule);
-            text-align: center;
-            background: var(--cream2);
-          "
-        >
-          <div
-            style="
-              font-size: 12px;
-              font-weight: 300;
-              letter-spacing: 2.5px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 5px;
-            "
-          >
-            Wednesday
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 26px;
-              color: var(--ink);
-            "
-          >
-            24 June
-          </div>
-          <div
-            style="
-              font-size: 14px;
-              font-weight: 300;
-              color: var(--mid);
-              margin-top: 6px;
-            "
-          >
-            Private Dinners<br />&amp; Personalised Activations
-          </div>
+        <div class="day-tab day-tab-tinted">
+          <span class="day-tab-day">Wednesday</span>
+          <span class="day-tab-date">24 June</span>
+          <span class="day-tab-desc">Private Dinners<br>&amp; Personalised Activations</span>
         </div>
-        <div style="padding: 20px 28px; text-align: center">
-          <div
-            style="
-              font-size: 12px;
-              font-weight: 300;
-              letter-spacing: 2.5px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 5px;
-            "
-          >
-            Thursday
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 26px;
-              color: var(--ink);
-            "
-          >
-            25 June
-          </div>
-          <div
-            style="
-              font-size: 14px;
-              font-weight: 300;
-              color: var(--mid);
-              margin-top: 6px;
-            "
-          >
-            88% Programme<br />&amp; Power List Party
-          </div>
+        <div class="day-tab">
+          <span class="day-tab-day">Thursday</span>
+          <span class="day-tab-date">25 June</span>
+          <span class="day-tab-desc">88% Programme<br>&amp; Power List Party</span>
         </div>
       </div>
 
@@ -2538,281 +2514,57 @@
       <h2 class="sec-title fade">
         Strategic advisors<br /><em>shaping the platform</em>
       </h2>
-      <div
-        style="
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0;
-          margin-top: 48px;
-          border-top: 0.5px solid var(--rule);
-          border-left: 0.5px solid var(--rule);
-        "
-      >
-        <div
-          style="
-            padding: 36px 32px;
-            border-right: 0.5px solid var(--rule);
-            border-bottom: 0.5px solid var(--rule);
-            background: var(--white);
-          "
-          class="fade"
-        >
-          <div
-            style="
-              font-size: 11px;
-              font-weight: 300;
-              letter-spacing: 2px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 9px;
-            "
-          >
-            Co-Host · Chair of Proceedings · Advisory Board
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 25px;
-              color: var(--ink);
-              margin-bottom: 12px;
-            "
-          >
-            Dr M'zée Fula-Ngenge
-          </div>
-          <p
-            style="
-              font-size: 15px;
-              font-weight: 400;
-              color: var(--mid);
-              line-height: 1.75;
-            "
-          >
+      <div class="adv-grid">
+        <div class="adv-card fade">
+          <div class="adv-card-role">Co-Host · Chair of Proceedings · Advisory Board</div>
+          <div class="adv-card-name">Dr M'zée Fula-Ngenge</div>
+          <p class="adv-card-bio">
             Veteran mining engineer and global economist with 40+ years in the
             diamond industry. Chairman of the African Diamond Council. Co-Host
             and Chair of Proceedings of the African Diamond Showcase.
           </p>
         </div>
-        <div
-          style="
-            padding: 36px 32px;
-            border-right: 0.5px solid var(--rule);
-            border-bottom: 0.5px solid var(--rule);
-            background: var(--white);
-          "
-          class="fade"
-        >
-          <div
-            style="
-              font-size: 11px;
-              font-weight: 300;
-              letter-spacing: 2px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 9px;
-            "
-          >
-            Advisory Board · CMO, Cassava Technologies
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 25px;
-              color: var(--ink);
-              margin-bottom: 12px;
-            "
-          >
-            Ifeoma Jibunoh
-          </div>
-          <p
-            style="
-              font-size: 15px;
-              font-weight: 400;
-              color: var(--mid);
-              line-height: 1.75;
-            "
-          >
+        <div class="adv-card fade">
+          <div class="adv-card-role">Advisory Board · CMO, Cassava Technologies</div>
+          <div class="adv-card-name">Ifeoma Jibunoh</div>
+          <p class="adv-card-bio">
             Chief Marketing Officer at Cassava Technologies. 20+ years across
             technology, FMCG and payments. Senior roles at Mastercard and
             Heineken. Brand strategy and storytelling across Africa and
             international markets.
           </p>
         </div>
-        <div
-          style="
-            padding: 36px 32px;
-            border-right: 0.5px solid var(--rule);
-            border-bottom: 0.5px solid var(--rule);
-            background: var(--white);
-          "
-          class="fade"
-        >
-          <div
-            style="
-              font-size: 11px;
-              font-weight: 300;
-              letter-spacing: 2px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 9px;
-            "
-          >
-            Advisory Board · Executive Chairman, Silverbacks Holdings
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 25px;
-              color: var(--ink);
-              margin-bottom: 12px;
-            "
-          >
-            Ibrahim Sagna
-          </div>
-          <p
-            style="
-              font-size: 15px;
-              font-weight: 400;
-              color: var(--mid);
-              line-height: 1.75;
-            "
-          >
+        <div class="adv-card fade">
+          <div class="adv-card-role">Advisory Board · Executive Chairman, Silverbacks Holdings</div>
+          <div class="adv-card-name">Ibrahim Sagna</div>
+          <p class="adv-card-bio">
             Senegalese financier and Executive Chairman of Silverbacks Holdings.
             20+ years global finance across the IMF, Afreximbank, and private
             equity. Focused on scaling African-born businesses globally.
           </p>
         </div>
-        <div
-          style="
-            padding: 36px 32px;
-            border-right: 0.5px solid var(--rule);
-            border-bottom: 0.5px solid var(--rule);
-            background: var(--white);
-          "
-          class="fade"
-        >
-          <div
-            style="
-              font-size: 11px;
-              font-weight: 300;
-              letter-spacing: 2px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 9px;
-            "
-          >
-            Advisory Board · Senior Fellow &amp; former CMCO, Mastercard
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 25px;
-              color: var(--ink);
-              margin-bottom: 12px;
-            "
-          >
-            Raja Rajamannar
-          </div>
-          <p
-            style="
-              font-size: 15px;
-              font-weight: 400;
-              color: var(--mid);
-              line-height: 1.75;
-            "
-          >
+        <div class="adv-card fade">
+          <div class="adv-card-role">Advisory Board · Senior Fellow &amp; former CMCO, Mastercard</div>
+          <div class="adv-card-name">Raja Rajamannar</div>
+          <p class="adv-card-bio">
             Globally recognised for transforming modern marketing through data,
             creativity and culture. Champion of innovation at the intersection
             of brand, technology and business growth.
           </p>
         </div>
-        <div
-          style="
-            padding: 36px 32px;
-            border-right: 0.5px solid var(--rule);
-            border-bottom: 0.5px solid var(--rule);
-            background: var(--white);
-          "
-          class="fade"
-        >
-          <div
-            style="
-              font-size: 11px;
-              font-weight: 300;
-              letter-spacing: 2px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 9px;
-            "
-          >
-            Advisory Board · Head of Original Brands, Sky
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 25px;
-              color: var(--ink);
-              margin-bottom: 12px;
-            "
-          >
-            Tim Yaw Struthers
-          </div>
-          <p
-            style="
-              font-size: 15px;
-              font-weight: 400;
-              color: var(--mid);
-              line-height: 1.75;
-            "
-          >
+        <div class="adv-card fade">
+          <div class="adv-card-role">Advisory Board · Head of Original Brands, Sky</div>
+          <div class="adv-card-name">Tim Yaw Struthers</div>
+          <p class="adv-card-bio">
             Award-winning Scottish-Ghanaian film and TV executive. Head of
             Original Brands at Sky. Two decades at Universal and major studios.
             Champion of the African creative economy.
           </p>
         </div>
-        <div
-          style="
-            padding: 36px 32px;
-            border-bottom: 0.5px solid var(--rule);
-            background: var(--white);
-          "
-          class="fade"
-        >
-          <div
-            style="
-              font-size: 11px;
-              font-weight: 300;
-              letter-spacing: 2px;
-              text-transform: uppercase;
-              color: var(--bronze);
-              margin-bottom: 9px;
-            "
-          >
-            Advisory Board · Founder, Gravana
-          </div>
-          <div
-            style="
-              font-family: &quot;Cormorant Garamond&quot;, serif;
-              font-weight: 300;
-              font-size: 25px;
-              color: var(--ink);
-              margin-bottom: 12px;
-            "
-          >
-            Cesar Christoforidis
-          </div>
-          <p
-            style="
-              font-size: 15px;
-              font-weight: 400;
-              color: var(--mid);
-              line-height: 1.75;
-            "
-          >
+        <div class="adv-card fade">
+          <div class="adv-card-role">Advisory Board · Founder, Gravana</div>
+          <div class="adv-card-name">Cesar Christoforidis</div>
+          <p class="adv-card-bio">
             Global sales, marketing and creator economy leader. Founder of
             Gravana, an AI platform helping brands decode data, culture and
             commerce across emerging markets.
