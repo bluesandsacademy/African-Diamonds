@@ -8,7 +8,7 @@
     </title>
     <meta
       name="description"
-      content="African Natural Diamonds is the global platform connecting Africa's diamond mining industry with the world. Next activation: Cannes, 22 June 2026."
+      content="African Natural Diamonds is the global platform connecting Africa's diamond mining industry with the world. Next activation: Cannes, 22 June 2027."
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://african-diamonds.vercel.app/" />
@@ -19,7 +19,7 @@
     />
     <meta
       property="og:description"
-      content="A global platform connecting Africa's diamond mining industry with the world. Next activation: Cannes, 22 June 2026."
+      content="A global platform connecting Africa's diamond mining industry with the world. Next activation: Cannes, 22 June 2027."
     />
     <meta property="og:url" content="https://african-diamonds.vercel.app/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,6 +69,75 @@
       a {
         text-decoration: none;
         color: inherit;
+      }
+
+      /* ── DISCLAIMER MODAL ── */
+      .disc-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 9000;
+        background: rgba(28, 24, 20, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        backdrop-filter: blur(4px);
+        opacity: 1;
+        transition: opacity 0.4s ease;
+      }
+      .disc-overlay.disc-hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .disc-box {
+        background: var(--cream);
+        border: 0.5px solid var(--champagne);
+        max-width: 560px;
+        width: 100%;
+        padding: 52px 48px 44px;
+        position: relative;
+        text-align: center;
+      }
+      .disc-rule {
+        width: 32px;
+        height: 0.5px;
+        background: var(--bronze);
+        margin: 0 auto 28px;
+      }
+      .disc-label {
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--bronze);
+        margin-bottom: 20px;
+        display: block;
+      }
+      .disc-body {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--ink);
+        margin-bottom: 36px;
+      }
+      .disc-btn {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--white);
+        background: var(--bronze);
+        border: none;
+        padding: 14px 40px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .disc-btn:hover { background: var(--ink); }
+      @media (max-width: 560px) {
+        .disc-box { padding: 40px 24px 36px; }
+        .disc-body { font-size: 16px; }
       }
 
       /* ── NAV ── */
@@ -1646,6 +1715,18 @@
     </style>
   </head>
   <body>
+    <!-- DISCLAIMER MODAL -->
+    <div class="disc-overlay" id="discOverlay" role="dialog" aria-modal="true" aria-label="Important disclaimer">
+      <div class="disc-box">
+        <div class="disc-rule"></div>
+        <span class="disc-label">Important Notice</span>
+        <p class="disc-body">
+          All programme elements, speakers, benefits, audiences, venues and dates are indicative only and subject to final confirmation, contracting, availability and receipt of payment. Terms and conditions apply.
+        </p>
+        <button class="disc-btn" id="discClose">I Understand</button>
+      </div>
+    </div>
+
     <!-- NAV -->
     <nav id="nav">
       <a class="nav-logo" href="#">
@@ -1696,7 +1777,7 @@
         <div class="hero-meta fade">
           <div class="hero-meta-item">
             <span class="hero-meta-label">Next Activation</span>
-            <span class="hero-meta-val">Cannes<br />22 June 2026</span>
+            <span class="hero-meta-val">Cannes<br />22 June 2027</span>
           </div>
           <div class="hero-meta-item">
             <span class="hero-meta-label">Upcoming Mission</span>
@@ -1820,7 +1901,7 @@
       <div class="pb-overlay pb-overlay-l">
         <div class="pb-text fade">
           <span class="pb-label-t"
-            >22 June 2026 · Cannes, France · By Invitation Only</span
+            >22 June 2027 · Cannes, France · By Invitation Only</span
           >
           <h2 class="pb-title">An evening<br />of <em>rare access</em></h2>
           <div class="pb-rule"></div>
@@ -1891,11 +1972,11 @@
     <section class="events-sec" id="events">
       <div class="events-header">
         <span class="sec-label fade"
-          >The Full Programme · 22 June 2026 · Cannes</span
+          >The Full Programme · 22 June 2027 · Cannes</span
         >
         <h2 class="sec-title fade">Four days.<br /><em>One movement.</em></h2>
         <p class="sec-body fade" style="margin-top: 8px">
-          A carefully curated four-day programme at Cannes 2026 — from an
+          A carefully curated four-day programme at Cannes 2027 — from an
           intimate private villa showcase to a week of deal-making, dinners, and
           cultural celebration. Each day is purposeful, each room is curated,
           every conversation is pre-arranged.
@@ -1940,7 +2021,7 @@
           </div>
           <div class="ev-body fade">
             <span class="ev-kicker"
-              >Monday 22 June 2026 · By Invitation Only</span
+              >Monday 22 June 2027 · By Invitation Only</span
             >
             <div class="ev-title">
               African Diamond Showcase &amp;<br />The Night of African Diamonds
@@ -1985,7 +2066,7 @@
           </div>
           <div class="ev-body fade">
             <span class="ev-kicker"
-              >Tuesday 23 &amp; Wednesday 24 June 2026</span
+              >Tuesday 23 &amp; Wednesday 24 June 2027</span
             >
             <div class="ev-title">
               Private 1:1 Meetings,<br />Dinners &amp; Client Activations
@@ -2023,7 +2104,7 @@
             <div class="ev-tag">25 June · 88% Programme · Cannes</div>
           </div>
           <div class="ev-body fade">
-            <span class="ev-kicker">Thursday 25 June 2026 · Cannes</span>
+            <span class="ev-kicker">Thursday 25 June 2027 · Cannes</span>
             <div class="ev-title">
               88% Programme &amp;<br />Power List Party
             </div>
@@ -2154,7 +2235,7 @@
 
     <!-- BRANDS -->
     <div class="brands-strip" style="display:none">
-      <span class="brands-label">Global Strategic Partner &amp; Ecosystem Target List &nbsp;·&nbsp; Cannes 2026</span>
+      <span class="brands-label">Global Strategic Partner &amp; Ecosystem Target List &nbsp;·&nbsp; Cannes 2027</span>
       <div class="brands-flex">
 
         <span class="brand-cat">Fine Jewellery &amp; Watches</span>
@@ -2390,7 +2471,7 @@
         <span class="brand-chip">Tyler Perry Studios</span>
         <span class="brand-chip">Netflix Africa</span>
 
-        <span class="brand-cat">JCK Las Vegas → Cannes June 2026</span>
+        <span class="brand-cat">JCK Las Vegas → Cannes June 2027</span>
         <span class="brand-chip">Natural Diamond Council (NDC)</span>
         <span class="brand-chip">AWDC</span>
         <span class="brand-chip">GIA</span>
@@ -2637,7 +2718,7 @@
           loading="lazy"
           style="object-position: center 40%"
         />
-        <div class="angola-tag">Upcoming · Angola · 2026/27</div>
+        <div class="angola-tag">Upcoming · Angola · 2027/28</div>
       </div>
       <div class="angola-text">
         <span class="sec-label-lt fade">Trade Mission</span>
@@ -2735,7 +2816,7 @@
       <div class="pb-overlay pb-overlay-l">
         <div class="pb-text fade">
           <span class="pb-label-t"
-            >22 June 2026 · French Riviera · By Invitation Only</span
+            >22 June 2027 · French Riviera · By Invitation Only</span
           >
           <h2 class="pb-title">The Night of<br /><em>African Diamonds</em></h2>
           <div class="pb-rule"></div>
@@ -2987,8 +3068,8 @@
         <div>
           <div class="ci-opt">
             <a
-              href="mailto:tori@88percent.co.uk?subject=Attendance — African Diamond Showcase Cannes 2026"
-              >Attending the African Diamond Showcase — Cannes 2026</a
+              href="mailto:tori@88percent.co.uk?subject=Attendance — African Diamond Showcase Cannes 2027"
+              >Attending the African Diamond Showcase — Cannes 2027</a
             >
           </div>
           <div class="ci-opt">
@@ -3026,7 +3107,7 @@
           Request<br /><em>information</em>
         </h2>
         <p class="sec-body-lt fade" style="margin-bottom: 0">
-          The African Diamond Showcase at Cannes 2026 is by invitation only. For
+          The African Diamond Showcase at Cannes 2027 is by invitation only. For
           attendance, sponsorship, the Angola Trade Mission, or platform
           partnership, contact the project lead directly.
         </p>
@@ -3120,9 +3201,9 @@
             >Enquire Now</a
           >
           <a
-            href="mailto:tori@88percent.co.uk?subject=Cannes 2026 Information Request"
+            href="mailto:tori@88percent.co.uk?subject=Cannes 2027 Information Request"
             class="btn btn-ghost-light"
-            >Cannes 2026 Information</a
+            >Cannes 2027 Information</a
           >
         </div>
         <p class="cta-e fade">
@@ -3142,8 +3223,8 @@
         </div>
       </div>
       <div class="f-r">
-        <p>Next activation: Cannes · 22 June 2026</p>
-        <p>Angola Trade Mission · 2026/27</p>
+        <p>Next activation: Cannes · 22 June 2027</p>
+        <p>Angola Trade Mission · 2027/28</p>
         <p><a href="mailto:tori@88percent.co.uk">tori@88percent.co.uk</a></p>
         <p><a href="https://africandiamonds.world">africandiamonds.world</a></p>
       </div>
@@ -3187,6 +3268,13 @@
 
       // Mobile nav
       const ham = document.getElementById("ham");
+      // Disclaimer modal
+      const discOverlay = document.getElementById("discOverlay");
+      document.getElementById("discClose").addEventListener("click", () => {
+        discOverlay.classList.add("disc-hidden");
+        setTimeout(() => { discOverlay.style.display = "none"; }, 400);
+      });
+
       let open = false;
       ham.addEventListener("click", () => {
         open = !open;
