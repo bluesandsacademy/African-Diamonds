@@ -10,7 +10,7 @@
       name="description"
       content="African Natural Diamonds is the global platform connecting Africa's diamond mining industry with the world. Next activation: Cannes, 22 June 2027."
     />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="indevax, follow" />
     <link rel="canonical" href="https://african-diamonds.vercel.app/" />
     <meta property="og:type" content="website" />
     <meta
@@ -134,10 +134,16 @@
         cursor: pointer;
         transition: background 0.2s;
       }
-      .disc-btn:hover { background: var(--ink); }
+      .disc-btn:hover {
+        background: var(--ink);
+      }
       @media (max-width: 560px) {
-        .disc-box { padding: 40px 24px 36px; }
-        .disc-body { font-size: 16px; }
+        .disc-box {
+          padding: 40px 24px 36px;
+        }
+        .disc-body {
+          font-size: 16px;
+        }
       }
 
       /* ── NAV ── */
@@ -971,7 +977,9 @@
         padding-bottom: 8px;
         border-bottom: 0.5px solid var(--rule);
       }
-      .brand-cat:first-child { margin-top: 0; }
+      .brand-cat:first-child {
+        margin-top: 0;
+      }
 
       /* ── CONNECT — warm white ── */
       .connect-header {
@@ -1472,8 +1480,12 @@
         text-align: center;
         border-right: 0.5px solid var(--rule);
       }
-      .day-tab:last-child { border-right: none; }
-      .day-tab-tinted { background: var(--cream2); }
+      .day-tab:last-child {
+        border-right: none;
+      }
+      .day-tab-tinted {
+        background: var(--cream2);
+      }
       .day-tab-day {
         display: block;
         font-size: 11px;
@@ -1515,8 +1527,12 @@
         border-bottom: 0.5px solid var(--rule);
         background: var(--white);
       }
-      .adv-card:nth-child(3n) { border-right: none; }
-      .adv-card:nth-child(n+4) { border-bottom: none; }
+      .adv-card:nth-child(3n) {
+        border-right: none;
+      }
+      .adv-card:nth-child(n + 4) {
+        border-bottom: none;
+      }
       .adv-card-role {
         font-size: 11px;
         font-weight: 300;
@@ -1641,17 +1657,31 @@
         .day-tabs {
           grid-template-columns: 1fr 1fr;
         }
-        .day-tab:nth-child(2) { border-right: none; }
-        .day-tab { border-bottom: 0.5px solid var(--rule); }
+        .day-tab:nth-child(2) {
+          border-right: none;
+        }
+        .day-tab {
+          border-bottom: 0.5px solid var(--rule);
+        }
         .day-tab:nth-child(3),
-        .day-tab:nth-child(4) { border-bottom: none; }
+        .day-tab:nth-child(4) {
+          border-bottom: none;
+        }
         .adv-grid {
           grid-template-columns: 1fr 1fr;
         }
-        .adv-card:nth-child(3n) { border-right: 0.5px solid var(--rule); }
-        .adv-card:nth-child(2n) { border-right: none; }
-        .adv-card:nth-child(n+4) { border-bottom: 0.5px solid var(--rule); }
-        .adv-card:nth-child(n+5) { border-bottom: none; }
+        .adv-card:nth-child(3n) {
+          border-right: 0.5px solid var(--rule);
+        }
+        .adv-card:nth-child(2n) {
+          border-right: none;
+        }
+        .adv-card:nth-child(n + 4) {
+          border-bottom: 0.5px solid var(--rule);
+        }
+        .adv-card:nth-child(n + 5) {
+          border-bottom: none;
+        }
         .benefits-grid,
         .outcomes-grid,
         .team-grid {
@@ -1689,22 +1719,32 @@
           border-right: none;
           border-bottom: 0.5px solid var(--rule);
         }
-        .day-tab:last-child { border-bottom: none; }
+        .day-tab:last-child {
+          border-bottom: none;
+        }
         .adv-grid {
           grid-template-columns: 1fr;
         }
         .adv-card,
         .adv-card:nth-child(2n),
-        .adv-card:nth-child(3n) { border-right: none; }
-        .adv-card:nth-child(n+4),
-        .adv-card:nth-child(n+5) { border-bottom: 0.5px solid var(--rule); }
-        .adv-card:last-child { border-bottom: none; }
+        .adv-card:nth-child(3n) {
+          border-right: none;
+        }
+        .adv-card:nth-child(n + 4),
+        .adv-card:nth-child(n + 5) {
+          border-bottom: 0.5px solid var(--rule);
+        }
+        .adv-card:last-child {
+          border-bottom: none;
+        }
         .pb-item {
           flex: 1 1 100%;
           border-right: none;
           border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
         }
-        .pb-item:last-child { border-bottom: none; }
+        .pb-item:last-child {
+          border-bottom: none;
+        }
         .benefits-grid,
         .outcomes-grid,
         .team-grid,
@@ -1716,12 +1756,21 @@
   </head>
   <body>
     <!-- DISCLAIMER MODAL -->
-    <div class="disc-overlay" id="discOverlay" role="dialog" aria-modal="true" aria-label="Important disclaimer">
+    <div
+      class="disc-overlay"
+      id="discOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Important disclaimer"
+    >
       <div class="disc-box">
         <div class="disc-rule"></div>
         <span class="disc-label">Important Notice</span>
         <p class="disc-body">
-          All programme elements, speakers, benefits, audiences, venues and dates are indicative only and subject to final confirmation, contracting, availability and receipt of payment. Terms and conditions apply.
+          All programme elements, speakers, benefits, audiences, venues and
+          dates are indicative only and subject to final confirmation,
+          contracting, availability and receipt of payment. Terms and conditions
+          apply.
         </p>
         <button class="disc-btn" id="discClose">I Understand</button>
       </div>
@@ -1988,22 +2037,30 @@
         <div class="day-tab">
           <span class="day-tab-day">Monday</span>
           <span class="day-tab-date">22 June</span>
-          <span class="day-tab-desc">African Diamond Showcase<br>&amp; Night of Diamonds</span>
+          <span class="day-tab-desc"
+            >African Diamond Showcase<br />&amp; Night of Diamonds</span
+          >
         </div>
         <div class="day-tab day-tab-tinted">
           <span class="day-tab-day">Tuesday</span>
           <span class="day-tab-date">23 June</span>
-          <span class="day-tab-desc">Private 1:1 Meetings<br>&amp; Client Activations</span>
+          <span class="day-tab-desc"
+            >Private 1:1 Meetings<br />&amp; Client Activations</span
+          >
         </div>
         <div class="day-tab day-tab-tinted">
           <span class="day-tab-day">Wednesday</span>
           <span class="day-tab-date">24 June</span>
-          <span class="day-tab-desc">Private Dinners<br>&amp; Personalised Activations</span>
+          <span class="day-tab-desc"
+            >Private Dinners<br />&amp; Personalised Activations</span
+          >
         </div>
         <div class="day-tab">
           <span class="day-tab-day">Thursday</span>
           <span class="day-tab-date">25 June</span>
-          <span class="day-tab-desc">88% Programme<br>&amp; Power List Party</span>
+          <span class="day-tab-desc"
+            >88% Programme<br />&amp; Power List Party</span
+          >
         </div>
       </div>
 
@@ -2234,10 +2291,12 @@
     </section>
 
     <!-- BRANDS -->
-    <div class="brands-strip" style="display:none">
-      <span class="brands-label">Global Strategic Partner &amp; Ecosystem Target List &nbsp;·&nbsp; Cannes 2027</span>
+    <div class="brands-strip" style="display: none">
+      <span class="brands-label"
+        >Global Strategic Partner &amp; Ecosystem Target List &nbsp;·&nbsp;
+        Cannes 2027</span
+      >
       <div class="brands-flex">
-
         <span class="brand-cat">Fine Jewellery &amp; Watches</span>
         <span class="brand-chip">Cartier</span>
         <span class="brand-chip">Bulgari</span>
@@ -2449,7 +2508,9 @@
         <span class="brand-chip">Condé Nast International</span>
         <span class="brand-chip">Hearst International</span>
 
-        <span class="brand-cat">Global Cultural Icons — Cannes &amp; The Riviera</span>
+        <span class="brand-cat"
+          >Global Cultural Icons — Cannes &amp; The Riviera</span
+        >
         <span class="brand-chip">Lupita Nyong'o</span>
         <span class="brand-chip">Idris Elba</span>
         <span class="brand-chip">Naomi Campbell</span>
@@ -2488,7 +2549,9 @@
         <span class="brand-chip">Signet Jewelers</span>
         <span class="brand-chip">Responsible Jewellery Council</span>
 
-        <span class="brand-cat">French Institutions &amp; Development Finance</span>
+        <span class="brand-cat"
+          >French Institutions &amp; Development Finance</span
+        >
         <span class="brand-chip">Business France</span>
         <span class="brand-chip">Proparco</span>
         <span class="brand-chip">Agence Française de Développement</span>
@@ -2520,7 +2583,9 @@
         <span class="brand-chip">EIB</span>
         <span class="brand-chip">Rabobank</span>
 
-        <span class="brand-cat">Africa-Focused Private Equity &amp; Development</span>
+        <span class="brand-cat"
+          >Africa-Focused Private Equity &amp; Development</span
+        >
         <span class="brand-chip">Helios Investment Partners</span>
         <span class="brand-chip">Development Partners International</span>
         <span class="brand-chip">TPG Capital (Rise Fund)</span>
@@ -2556,7 +2621,9 @@
         <span class="brand-chip">Alaska Permanent Fund</span>
         <span class="brand-chip">Khazanah — Malaysia</span>
 
-        <span class="brand-cat">Global Family Offices — Cannes &amp; Monaco</span>
+        <span class="brand-cat"
+          >Global Family Offices — Cannes &amp; Monaco</span
+        >
         <span class="brand-chip">Walton Enterprises LLC</span>
         <span class="brand-chip">Cascade Investment (Gates)</span>
         <span class="brand-chip">Bezos Expeditions</span>
@@ -2577,7 +2644,9 @@
         <span class="brand-chip">Dangote Family Office</span>
         <span class="brand-chip">L Catterton (LVMH-affiliated)</span>
 
-        <span class="brand-cat">Diamond Industry Bodies, Bourses &amp; Standards</span>
+        <span class="brand-cat"
+          >Diamond Industry Bodies, Bourses &amp; Standards</span
+        >
         <span class="brand-chip">Natural Diamond Council</span>
         <span class="brand-chip">AWDC</span>
         <span class="brand-chip">World Diamond Council</span>
@@ -2597,7 +2666,6 @@
         <span class="brand-chip">Rio Tinto Diamonds</span>
         <span class="brand-chip">Diamond Review Africa</span>
         <span class="brand-chip">JCK / RX Global</span>
-
       </div>
     </div>
 
@@ -2897,7 +2965,9 @@
       </h2>
       <div class="adv-grid">
         <div class="adv-card fade">
-          <div class="adv-card-role">Co-Host · Chair of Proceedings · Advisory Board</div>
+          <div class="adv-card-role">
+            Co-Host · Chair of Proceedings · Advisory Board
+          </div>
           <div class="adv-card-name">Dr M'zée Fula-Ngenge</div>
           <p class="adv-card-bio">
             Veteran mining engineer and global economist with 40+ years in the
@@ -2906,7 +2976,9 @@
           </p>
         </div>
         <div class="adv-card fade">
-          <div class="adv-card-role">Advisory Board · CMO, Cassava Technologies</div>
+          <div class="adv-card-role">
+            Advisory Board · CMO, Cassava Technologies
+          </div>
           <div class="adv-card-name">Ifeoma Jibunoh</div>
           <p class="adv-card-bio">
             Chief Marketing Officer at Cassava Technologies. 20+ years across
@@ -2916,39 +2988,14 @@
           </p>
         </div>
         <div class="adv-card fade">
-          <div class="adv-card-role">Advisory Board · Executive Chairman, Silverbacks Holdings</div>
+          <div class="adv-card-role">
+            Advisory Board · Executive Chairman, Silverbacks Holdings
+          </div>
           <div class="adv-card-name">Ibrahim Sagna</div>
           <p class="adv-card-bio">
             Senegalese financier and Executive Chairman of Silverbacks Holdings.
             20+ years global finance across the IMF, Afreximbank, and private
             equity. Focused on scaling African-born businesses globally.
-          </p>
-        </div>
-        <div class="adv-card fade">
-          <div class="adv-card-role">Advisory Board · Senior Fellow &amp; former CMCO, Mastercard</div>
-          <div class="adv-card-name">Raja Rajamannar</div>
-          <p class="adv-card-bio">
-            Globally recognised for transforming modern marketing through data,
-            creativity and culture. Champion of innovation at the intersection
-            of brand, technology and business growth.
-          </p>
-        </div>
-        <div class="adv-card fade">
-          <div class="adv-card-role">Advisory Board · Head of Original Brands, Sky</div>
-          <div class="adv-card-name">Tim Yaw Struthers</div>
-          <p class="adv-card-bio">
-            Award-winning Scottish-Ghanaian film and TV executive. Head of
-            Original Brands at Sky. Two decades at Universal and major studios.
-            Champion of the African creative economy.
-          </p>
-        </div>
-        <div class="adv-card fade">
-          <div class="adv-card-role">Advisory Board · Founder, Gravana</div>
-          <div class="adv-card-name">Cesar Christoforidis</div>
-          <p class="adv-card-bio">
-            Global sales, marketing and creator economy leader. Founder of
-            Gravana, an AI platform helping brands decode data, culture and
-            commerce across emerging markets.
           </p>
         </div>
       </div>
@@ -2961,16 +3008,6 @@
         The people<br /><em>delivering this</em>
       </h2>
       <div class="team-grid">
-        <div class="team-box fade">
-          <span class="t-role">CEO · Founder</span>
-          <div class="t-name">Vanessa Sawyerr</div>
-          <p class="t-bio">
-            Brand strategist with 25+ years in partnerships, fundraising, and
-            cultural storytelling. Generated over £15M in sponsorship and sales.
-            Built and delivered event and cultural platforms across Cannes, New
-            York, and London.
-          </p>
-        </div>
         <div class="team-box fade">
           <span class="t-role"
             >Chief Commercial Officer &amp; Partners · Project Lead</span
@@ -2993,15 +3030,7 @@
             College London.
           </p>
         </div>
-        <div class="team-box fade">
-          <span class="t-role">Event Production · French Riviera</span>
-          <div class="t-name">Raffael Morrone</div>
-          <p class="t-bio">
-            Founder of Canne Event Agency. 15+ years delivering high-profile
-            events on the French Riviera including Cannes, MIPIM, and the Film
-            Festival. Clients include L'Oréal, Variety, Spotify, and Canva.
-          </p>
-        </div>
+
         <div class="team-box fade">
           <span class="t-role">Finance &amp; Development</span>
           <div class="t-name">Craig Otter</div>
@@ -3011,24 +3040,7 @@
             Development. ACCA-qualified. Former Editor, The Economist.
           </p>
         </div>
-        <div class="team-box fade">
-          <span class="t-role">CMO &amp; CCO</span>
-          <div class="t-name">Nikki Sehgal</div>
-          <p class="t-bio">
-            General Manager of Media For All CIC. Co-chairs the Advertising
-            Association's Asian Talent Working Group. WACL Talent Award winner.
-            Member of The Media Leader Future 100 Club.
-          </p>
-        </div>
-        <div class="team-box fade">
-          <span class="t-role">COO</span>
-          <div class="t-name">Dudley Sawyerr</div>
-          <p class="t-bio">
-            15+ years in business strategy, operations, and stakeholder
-            engagement. Leads operational delivery and complex partnerships.
-            Lectures in MBA sessions at SOAS, University of London.
-          </p>
-        </div>
+
         <div class="team-box fade">
           <span class="t-role"
             >Co-Host · African Diamond Manufacturers Association</span
@@ -3272,7 +3284,9 @@
       const discOverlay = document.getElementById("discOverlay");
       document.getElementById("discClose").addEventListener("click", () => {
         discOverlay.classList.add("disc-hidden");
-        setTimeout(() => { discOverlay.style.display = "none"; }, 400);
+        setTimeout(() => {
+          discOverlay.style.display = "none";
+        }, 400);
       });
 
       let open = false;
